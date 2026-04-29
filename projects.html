@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Alex Rivera | Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/projects.css" />
+  
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div id="preloader">
+      <div class="loader-ring"></div>
+      <div class="loader-txt">Loading Gallery</div>
+      <div class="loader-bar"><span id="loader-progress"></span></div>
+    </div>
+    <div class="page-transition" id="page-transition"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo" data-nav
+        ><div class="logo-icon"></div>
+        NEXUS</a
+      >
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="about.html" data-nav>About</a></li>
+        <li><a href="skills.html" data-nav>Skills</a></li>
+        <li><a href="projects.html" class="active" data-nav>Projects</a></li>
+        <li><a href="experience.html" data-nav>Experience</a></li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="webgl"></canvas>
+
+    <div class="content">
+      <!-- ═══ HERO ═══ -->
+      <section class="proj-hero">
+        <div class="proj-hero-inner">
+          <div class="section-label">// Project Archive</div>
+          <h1>
+            <span class="line"
+              ><span class="line-inner">Things I've</span></span
+            >
+            <span class="line"
+              ><span class="line-inner"
+                ><span class="accent">Built.</span></span
+              ></span
+            >
+          </h1>
+          <p class="hero-sub">
+            A curated selection of products, platforms, and experiments — each
+            one a lesson in solving real problems with elegant code.
+          </p>
+        </div>
+      </section>
+
+      <!-- ═══ FEATURED PROJECT ═══ -->
+      <section class="featured" id="featured">
+        <div class="featured-label">★ Featured Project</div>
+        <div class="featured-card">
+          <div class="featured-visual">
+            <div class="featured-visual-mock">
+              <div class="mock-bar">
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+                <div class="mock-dot"></div>
+              </div>
+              <div class="mock-body">
+                <div class="mock-sidebar">
+                  <div
+                    class="mock-line"
+                    style="width: 70%; background: var(--cyan)"
+                  ></div>
+                  <div
+                    class="mock-line"
+                    style="width: 50%; background: var(--magenta)"
+                  ></div>
+                  <div
+                    class="mock-line"
+                    style="width: 85%; background: var(--lime)"
+                  ></div>
+                  <div
+                    class="mock-line"
+                    style="width: 40%; background: var(--purple)"
+                  ></div>
+                  <div
+                    class="mock-line"
+                    style="width: 65%; background: var(--cyan)"
+                  ></div>
+                  <div
+                    class="mock-line"
+                    style="width: 55%; background: var(--magenta)"
+                  ></div>
+                  <div
+                    class="mock-line"
+                    style="width: 75%; background: var(--lime)"
+                  ></div>
+                </div>
+                <div class="mock-content">
+                  <div
+                    class="mock-block"
+                    style="width: 80%; height: 20px; background: var(--cyan)"
+                  ></div>
+                  <div
+                    class="mock-block"
+                    style="
+                      width: 100%;
+                      height: 60px;
+                      background: var(--magenta);
+                    "
+                  ></div>
+                  <div
+                    class="mock-block"
+                    style="width: 60%; height: 14px; background: var(--gray)"
+                  ></div>
+                  <div
+                    class="mock-block"
+                    style="width: 45%; height: 14px; background: var(--gray)"
+                  ></div>
+                  <div
+                    class="mock-block"
+                    style="
+                      width: 100%;
+                      height: 40px;
+                      background: var(--purple);
+                      margin-top: auto;
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="featured-visual-glow glow-1"></div>
+            <div class="featured-visual-glow glow-2"></div>
+          </div>
+          <div class="featured-info">
+            <div class="proj-type">Full-Stack Platform</div>
+            <h2 class="proj-title">
+              CloudSync — Real-Time Collaboration Engine
+            </h2>
+            <p class="proj-desc">
+              A distributed collaboration platform processing 2M+ daily API
+              requests. Features real-time document editing with CRDT conflict
+              resolution, role-based workspaces, and a plugin marketplace.
+              Reduced team onboarding time by 40%.
+            </p>
+            <div class="proj-stack">
+              <span>React</span><span>TypeScript</span><span>Spring Boot</span
+              ><span>PostgreSQL</span><span>Redis</span><span>WebSockets</span
+              ><span>Docker</span><span>K8s</span>
+            </div>
+            <div class="proj-links">
+              <a href="#" class="proj-link"><span>Live Demo</span></a>
+              <a href="#" class="proj-link secondary"
+                ><span>Source Code</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ PROJECT GRID ═══ -->
+      <section class="grid-section" id="grid">
+        <h2 class="grid-heading">More <span class="accent">Work</span></h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <div
+                class="thumb-gradient"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(0, 240, 255, 0.1),
+                    rgba(0, 240, 255, 0.02)
+                  );
+                "
+              ></div>
+              <svg
+                class="thumb-pattern"
+                viewBox="0 0 400 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <pattern
+                    id="g1"
+                    width="20"
+                    height="20"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="1" cy="1" r="1" fill="rgba(0,240,255,.08)" />
+                  </pattern>
+                </defs>
+                <rect width="400" height="200" fill="url(#g1)" />
+              </svg>
+              <div class="thumb-icon">⚡</div>
+            </div>
+            <div class="project-body">
+              <div class="card-type t-cyan">API Infrastructure</div>
+              <h3 class="card-title">SwiftAPI Gateway</h3>
+              <p class="card-desc">
+                High-performance API gateway with rate limiting, circuit
+                breakers, and auto-scaling. Handles 50k+ req/sec with sub-5ms
+                latency.
+              </p>
+              <div class="card-stack">
+                <span>Java</span><span>Spring Cloud</span><span>Kafka</span
+                ><span>Grafana</span>
+              </div>
+              <div class="card-links">
+                <a href="#" class="card-link">Demo</a>
+                <a href="#" class="card-link secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <div
+                class="thumb-gradient"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 0, 255, 0.1),
+                    rgba(255, 0, 255, 0.02)
+                  );
+                "
+              ></div>
+              <svg
+                class="thumb-pattern"
+                viewBox="0 0 400 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <pattern
+                    id="g2"
+                    width="24"
+                    height="24"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <rect
+                      x="0"
+                      y="0"
+                      width="1"
+                      height="24"
+                      fill="rgba(255,0,255,.05)"
+                    />
+                  </pattern>
+                </defs>
+                <rect width="400" height="200" fill="url(#g2)" />
+              </svg>
+              <div class="thumb-icon">◈</div>
+            </div>
+            <div class="project-body">
+              <div class="card-type t-magenta">E-Commerce</div>
+              <h3 class="card-title">NovaMart Storefront</h3>
+              <p class="card-desc">
+                Headless e-commerce platform with dynamic pricing, real-time
+                inventory, and a 98 Lighthouse performance score. Built for
+                100k+ SKUs.
+              </p>
+              <div class="card-stack">
+                <span>Next.js</span><span>Stripe</span><span>Prisma</span
+                ><span>Vercel</span>
+              </div>
+              <div class="card-links">
+                <a href="#" class="card-link">Demo</a>
+                <a href="#" class="card-link secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <div
+                class="thumb-gradient"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(0, 255, 136, 0.1),
+                    rgba(0, 255, 136, 0.02)
+                  );
+                "
+              ></div>
+              <svg
+                class="thumb-pattern"
+                viewBox="0 0 400 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <pattern
+                    id="g3"
+                    width="30"
+                    height="30"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle cx="15" cy="15" r="0.5" fill="rgba(0,255,136,.1)" />
+                    <line
+                      x1="15"
+                      y1="0"
+                      x2="15"
+                      y2="30"
+                      stroke="rgba(0,255,136,.03)"
+                      stroke-width=".5"
+                    />
+                  </pattern>
+                </defs>
+                <rect width="400" height="200" fill="url(#g3)" />
+              </svg>
+              <div class="thumb-icon">▲</div>
+            </div>
+            <div class="project-body">
+              <div class="card-type t-lime">DevTool</div>
+              <h3 class="card-title">DeployPilot CLI</h3>
+              <p class="card-desc">
+                Zero-config deployment CLI that auto-detects project type,
+                provisions infrastructure, and ships to cloud in under 60
+                seconds.
+              </p>
+              <div class="card-stack">
+                <span>Node.js</span><span>AWS CDK</span><span>Docker</span
+                ><span>Terraform</span>
+              </div>
+              <div class="card-links">
+                <a href="#" class="card-link">NPM</a>
+                <a href="#" class="card-link secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <div
+                class="thumb-gradient"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(168, 85, 247, 0.1),
+                    rgba(168, 85, 247, 0.02)
+                  );
+                "
+              ></div>
+              <svg
+                class="thumb-pattern"
+                viewBox="0 0 400 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <pattern
+                    id="g4"
+                    width="16"
+                    height="16"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <rect
+                      width="16"
+                      height="16"
+                      fill="none"
+                      stroke="rgba(168,85,247,.04)"
+                      stroke-width=".5"
+                    />
+                  </pattern>
+                </defs>
+                <rect width="400" height="200" fill="url(#g4)" />
+              </svg>
+              <div class="thumb-icon">◇</div>
+            </div>
+            <div class="project-body">
+              <div class="card-type t-purple">Data Viz</div>
+              <h3 class="card-title">InsightDash Analytics</h3>
+              <p class="card-desc">
+                Interactive analytics dashboard with real-time WebSocket data
+                streaming, 12+ chart types, and exportable PDF reports.
+              </p>
+              <div class="card-stack">
+                <span>React</span><span>D3.js</span><span>FastAPI</span
+                ><span>ClickHouse</span>
+              </div>
+              <div class="card-links">
+                <a href="#" class="card-link">Demo</a>
+                <a href="#" class="card-link secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <div
+                class="thumb-gradient"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(0, 240, 255, 0.08),
+                    rgba(255, 0, 255, 0.06)
+                  );
+                "
+              ></div>
+              <svg
+                class="thumb-pattern"
+                viewBox="0 0 400 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <pattern
+                    id="g5"
+                    width="40"
+                    height="40"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <circle
+                      cx="20"
+                      cy="20"
+                      r="8"
+                      fill="none"
+                      stroke="rgba(0,240,255,.04)"
+                      stroke-width=".5"
+                    />
+                  </pattern>
+                </defs>
+                <rect width="400" height="200" fill="url(#g5)" />
+              </svg>
+              <div class="thumb-icon">○</div>
+            </div>
+            <div class="project-body">
+              <div class="card-type t-cyan">Creative</div>
+              <h3 class="card-title">Particle Forge</h3>
+              <p class="card-desc">
+                WebGL particle system editor with real-time GLSL shader editing,
+                GPU-computed physics, and shareable presets. 50k+ experiments
+                created.
+              </p>
+              <div class="card-stack">
+                <span>Three.js</span><span>GLSL</span><span>WebGPU</span
+                ><span>Svelte</span>
+              </div>
+              <div class="card-links">
+                <a href="#" class="card-link">Demo</a>
+                <a href="#" class="card-link secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="project-card">
+            <div class="project-thumb">
+              <div
+                class="thumb-gradient"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(255, 0, 255, 0.08),
+                    rgba(0, 255, 136, 0.06)
+                  );
+                "
+              ></div>
+              <svg
+                class="thumb-pattern"
+                viewBox="0 0 400 200"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <defs>
+                  <pattern
+                    id="g6"
+                    width="20"
+                    height="20"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <line
+                      x1="0"
+                      y1="20"
+                      x2="20"
+                      y2="0"
+                      stroke="rgba(255,0,255,.04)"
+                      stroke-width=".5"
+                    />
+                  </pattern>
+                </defs>
+                <rect width="400" height="200" fill="url(#g6)" />
+              </svg>
+              <div class="thumb-icon">⬡</div>
+            </div>
+            <div class="project-body">
+              <div class="card-type t-magenta">SaaS Platform</div>
+              <h3 class="card-title">FormForge Builder</h3>
+              <p class="card-desc">
+                Drag-and-drop form builder with conditional logic, payment
+                integrations, and analytics. Powers 10,000+ active forms across
+                200+ companies.
+              </p>
+              <div class="card-stack">
+                <span>Next.js</span><span>tRPC</span><span>Drizzle</span
+                ><span>Stripe</span>
+              </div>
+              <div class="card-links">
+                <a href="#" class="card-link">Demo</a>
+                <a href="#" class="card-link secondary">GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ OPEN SOURCE ═══ -->
+      <section class="oss-strip" id="oss">
+        <h2 class="oss-heading">
+          Open <span class="accent">Source</span> Contributions
+        </h2>
+        <p class="oss-desc">
+          I believe in giving back to the tools that power my work. Here are
+          some of my active open-source contributions.
+        </p>
+        <div class="oss-cards">
+          <div class="oss-card">
+            <div class="oss-name">react-scroll-physics</div>
+            <div class="oss-meta">★ 1.2k &nbsp;|&nbsp; TypeScript</div>
+            <p class="oss-text">
+              Spring-based smooth scroll library with momentum, snapping, and
+              infinite scroll support.
+            </p>
+          </div>
+          <div class="oss-card">
+            <div class="oss-name">microservice-starter</div>
+            <div class="oss-meta">★ 890 &nbsp;|&nbsp; Java</div>
+            <p class="oss-text">
+              Opinionated Spring Boot starter with auth, logging, health checks,
+              and Docker config out of the box.
+            </p>
+          </div>
+          <div class="oss-card">
+            <div class="oss-name">glsl-noise-pack</div>
+            <div class="oss-meta">★ 650 &nbsp;|&nbsp; GLSL</div>
+            <p class="oss-text">
+              Collection of optimized noise functions (simplex, Perlin, curl,
+              voronoi) for WebGL shaders.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ NEXT CTA ═══ -->
+      <section class="next-cta">
+        <div class="next-cta-label">Next Dimension</div>
+        <h2 class="next-cta-heading">
+          <a href="experience.html" data-nav>My Experience &rarr;</a>
+        </h2>
+      </section>
+
+      <div class="footer-bar">
+        <span>&copy; 2026 Alex Rivera. Built from scratch.</span>
+        <div class="footer-socials">
+          <a
+            href="https://github.com/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a href="mailto:alex@alexrivera.dev">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import * as THREE from "three";
+      import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+      import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+      import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+      import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+
+      /* ════════════════════════════════════════════════════════
+           3D SCENE: "The Archive Grid"
+           — Floating holographic panels/cubes arranged in loose
+             3D grid that slowly rotates. Each "panel" is a flat
+             box with edge-glow material. Particles drift between
+             them like data fragments. Creating the feel of a
+             digital vault / gallery space.
+        ════════════════════════════════════════════════════════ */
+
+      const isMobile = window.innerWidth < 768;
+      const canvas = document.getElementById("webgl");
+      const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: !isMobile,
+        alpha: true,
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x05060f, 1);
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 0.8;
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x05060f, 0.007);
+
+      const camera = new THREE.PerspectiveCamera(
+        50,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        500,
+      );
+      camera.position.set(0, 0, 55);
+
+      const clock = new THREE.Clock();
+      const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+
+      /* ── LIGHTS ── */
+      scene.add(new THREE.AmbientLight(0x0a0a20, 0.4));
+      const l1 = new THREE.PointLight(0x00f0ff, 2, 100);
+      l1.position.set(25, 15, 20);
+      scene.add(l1);
+      const l2 = new THREE.PointLight(0xff00ff, 1.5, 80);
+      l2.position.set(-25, -10, 15);
+      scene.add(l2);
+      const l3 = new THREE.PointLight(0xa855f7, 1, 60);
+      l3.position.set(0, -20, -20);
+      scene.add(l3);
+
+      /* ── HOLOGRAPHIC PANELS ── */
+      const panelGroup = new THREE.Group();
+      scene.add(panelGroup);
+      const panels = [];
+      const panelCount = isMobile ? 15 : 30;
+      const colors = [0x00f0ff, 0xff00ff, 0x00ff88, 0xa855f7];
+
+      for (let i = 0; i < panelCount; i++) {
+        const w = 1.5 + Math.random() * 2.5;
+        const h = 1 + Math.random() * 2;
+        const d = 0.05 + Math.random() * 0.1;
+        const geo = new THREE.BoxGeometry(w, h, d);
+        const col = colors[i % 4];
+
+        const mat = new THREE.MeshStandardMaterial({
+          color: col,
+          emissive: col,
+          emissiveIntensity: 0.15,
+          metalness: 0.9,
+          roughness: 0.15,
+          transparent: true,
+          opacity: 0.12,
+        });
+        const mesh = new THREE.Mesh(geo, mat);
+
+        // Edge wireframe
+        const edge = new THREE.LineSegments(
+          new THREE.EdgesGeometry(geo),
+          new THREE.LineBasicMaterial({
+            color: col,
+            transparent: true,
+            opacity: 0.25,
+          }),
+        );
+        mesh.add(edge);
+
+        // Position in loose 3D grid
+        const spread = 35;
+        mesh.position.set(
+          (Math.random() - 0.5) * spread,
+          (Math.random() - 0.5) * spread * 0.6,
+          (Math.random() - 0.5) * spread,
+        );
+        mesh.rotation.set(
+          (Math.random() - 0.5) * 0.4,
+          (Math.random() - 0.5) * 0.4,
+          (Math.random() - 0.5) * 0.2,
+        );
+
+        mesh.userData = {
+          oy: mesh.position.y,
+          rx: (Math.random() - 0.5) * 0.003,
+          ry: (Math.random() - 0.5) * 0.003,
+          freq: 0.3 + Math.random() * 0.6,
+          amp: 0.5 + Math.random() * 1.5,
+          phase: Math.random() * Math.PI * 2,
+          pulseSpeed: 1 + Math.random() * 2,
+        };
+        panelGroup.add(mesh);
+        panels.push(mesh);
+      }
+
+      /* ── DATA FRAGMENT PARTICLES ── */
+      const fragCount = isMobile ? 300 : 800;
+      const fGeo = new THREE.BufferGeometry();
+      const fPos = new Float32Array(fragCount * 3);
+      const fSizes = new Float32Array(fragCount);
+      const fColors = new Float32Array(fragCount * 3);
+      const fSpeeds = new Float32Array(fragCount);
+
+      for (let i = 0; i < fragCount; i++) {
+        fPos[i * 3] = (Math.random() - 0.5) * 60;
+        fPos[i * 3 + 1] = (Math.random() - 0.5) * 40;
+        fPos[i * 3 + 2] = (Math.random() - 0.5) * 60;
+        fSizes[i] = 0.3 + Math.random() * 0.8;
+        fSpeeds[i] = 0.5 + Math.random() * 2;
+        const c = new THREE.Color(colors[Math.floor(Math.random() * 4)]);
+        fColors[i * 3] = c.r;
+        fColors[i * 3 + 1] = c.g;
+        fColors[i * 3 + 2] = c.b;
+      }
+      fGeo.setAttribute("position", new THREE.BufferAttribute(fPos, 3));
+      fGeo.setAttribute("size", new THREE.BufferAttribute(fSizes, 1));
+      fGeo.setAttribute("color", new THREE.BufferAttribute(fColors, 3));
+      fGeo.setAttribute("speed", new THREE.BufferAttribute(fSpeeds, 1));
+
+      const fragMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uPR: { value: renderer.getPixelRatio() },
+        },
+        vertexShader: `
+                attribute float size; attribute vec3 color; attribute float speed;
+                varying vec3 vC; varying float vA;
+                uniform float uTime, uPR;
+                void main(){
+                    vC = color;
+                    vec3 p = position;
+                    // Gentle drift upward, wrap
+                    p.y = mod(p.y + uTime * speed * 0.3, 40.0) - 20.0;
+                    p.x += sin(uTime * 0.15 + position.z * 0.05) * 0.8;
+                    p.z += cos(uTime * 0.12 + position.x * 0.05) * 0.8;
+                    vec4 mv = modelViewMatrix * vec4(p, 1.0);
+                    gl_PointSize = size * uPR * (25.0 / -mv.z);
+                    vA = smoothstep(20.0, 8.0, abs(p.y));
+                    gl_Position = projectionMatrix * mv;
+                }
+            `,
+        fragmentShader: `
+                varying vec3 vC; varying float vA;
+                void main(){
+                    float d = length(gl_PointCoord - 0.5);
+                    if(d > 0.5) discard;
+                    // Square-ish data fragment look
+                    float shape = max(abs(gl_PointCoord.x - 0.5), abs(gl_PointCoord.y - 0.5));
+                    float a = smoothstep(0.5, 0.2, shape) * 0.3 * vA;
+                    gl_FragColor = vec4(vC, a);
+                }
+            `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      });
+      scene.add(new THREE.Points(fGeo, fragMat));
+
+      /* ── BACKGROUND STARS ── */
+      const starCount = isMobile ? 250 : 700;
+      const stGeo = new THREE.BufferGeometry();
+      const stPos = new Float32Array(starCount * 3);
+      const stSizes = new Float32Array(starCount);
+      for (let i = 0; i < starCount; i++) {
+        const r = 50 + Math.random() * 120;
+        const th = Math.random() * Math.PI * 2;
+        const ph = Math.acos(2 * Math.random() - 1);
+        stPos[i * 3] = r * Math.sin(ph) * Math.cos(th);
+        stPos[i * 3 + 1] = r * Math.sin(ph) * Math.sin(th);
+        stPos[i * 3 + 2] = r * Math.cos(ph);
+        stSizes[i] = Math.random() * 0.6 + 0.1;
+      }
+      stGeo.setAttribute("position", new THREE.BufferAttribute(stPos, 3));
+      stGeo.setAttribute("size", new THREE.BufferAttribute(stSizes, 1));
+
+      const starMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uPR: { value: renderer.getPixelRatio() },
+        },
+        vertexShader: `
+                attribute float size; uniform float uTime, uPR;
+                varying float vA;
+                void main(){
+                    vec3 p = position;
+                    vec4 mv = modelViewMatrix * vec4(p, 1.0);
+                    gl_PointSize = size * uPR * (30.0 / -mv.z);
+                    vA = sin(uTime * (0.5 + size) + position.x) * 0.3 + 0.7;
+                    gl_Position = projectionMatrix * mv;
+                }
+            `,
+        fragmentShader: `
+                varying float vA;
+                void main(){
+                    float d = length(gl_PointCoord - 0.5);
+                    if(d > 0.5) discard;
+                    gl_FragColor = vec4(0.45, 0.5, 0.65, smoothstep(0.5, 0.0, d) * 0.2 * vA);
+                }
+            `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      });
+      scene.add(new THREE.Points(stGeo, starMat));
+
+      /* ── DECORATIVE RINGS ── */
+      const rMat = (c) =>
+        new THREE.MeshBasicMaterial({
+          color: c,
+          transparent: true,
+          opacity: 0.05,
+          blending: THREE.AdditiveBlending,
+        });
+      const rGeo = new THREE.TorusGeometry(18, 0.025, 6, 120);
+      const ring1 = new THREE.Mesh(rGeo, rMat(0x00f0ff));
+      ring1.rotation.x = Math.PI / 2.3;
+      scene.add(ring1);
+      const ring2 = new THREE.Mesh(rGeo.clone(), rMat(0xff00ff));
+      ring2.rotation.x = Math.PI / 3;
+      ring2.rotation.z = 0.7;
+      scene.add(ring2);
+
+      /* ── POST-PROCESSING ── */
+      const composer = new EffectComposer(renderer);
+      composer.addPass(new RenderPass(scene, camera));
+      if (!isMobile) {
+        composer.addPass(
+          new UnrealBloomPass(
+            new THREE.Vector2(window.innerWidth, window.innerHeight),
+            0.6,
+            0.4,
+            0.4,
+          ),
+        );
+      }
+      const compShader = {
+        uniforms: { tDiffuse: { value: null }, uTime: { value: 0 } },
+        vertexShader: `varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+        fragmentShader: `
+                uniform sampler2D tDiffuse; uniform float uTime; varying vec2 vUv;
+                void main(){
+                    vec2 uv = vUv; vec2 d = uv - 0.5;
+                    float ca = length(d) * 0.001;
+                    float r = texture2D(tDiffuse, uv + d * ca).r;
+                    float g = texture2D(tDiffuse, uv).g;
+                    float b = texture2D(tDiffuse, uv - d * ca).b;
+                    float vig = 1.0 - dot(d, d) * 0.85;
+                    vig = smoothstep(0.0, 1.0, vig);
+                    // Subtle scanlines
+                    float scan = 1.0 - sin(uv.y * 400.0 + uTime) * 0.015;
+                    gl_FragColor = vec4(vec3(r, g, b) * vig * scan, 1.0);
+                }
+            `,
+      };
+      composer.addPass(new ShaderPass(compShader));
+
+      /* ── ANIMATE ── */
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = clock.getElapsedTime();
+
+        mouse.x += (mouse.tx - mouse.x) * 0.03;
+        mouse.y += (mouse.ty - mouse.y) * 0.03;
+
+        camera.position.x += (mouse.x * 4 - camera.position.x) * 0.015;
+        camera.position.y += (mouse.y * 3 - camera.position.y) * 0.015;
+        camera.lookAt(0, 0, 0);
+
+        // Slow gallery rotation
+        panelGroup.rotation.y = t * 0.02 + mouse.x * 0.1;
+        panelGroup.rotation.x = Math.sin(t * 0.01) * 0.04;
+
+        // Panels float & pulse
+        for (const p of panels) {
+          const u = p.userData;
+          p.position.y = u.oy + Math.sin(t * u.freq + u.phase) * u.amp;
+          p.rotation.x += u.rx;
+          p.rotation.y += u.ry;
+          // Pulse emissive
+          const pulse =
+            (Math.sin(t * u.pulseSpeed + u.phase) * 0.5 + 0.5) * 0.08 + 0.12;
+          p.material.emissiveIntensity = pulse;
+          p.material.opacity = pulse * 0.8;
+        }
+
+        // Rings
+        ring1.rotation.z = t * 0.015;
+        ring2.rotation.z = -t * 0.012;
+
+        // Lights orbit
+        l1.position.x = Math.cos(t * 0.09) * 25;
+        l1.position.z = Math.sin(t * 0.09) * 25;
+        l2.position.x = Math.cos(t * 0.065 + 2) * 22;
+        l2.position.z = Math.sin(t * 0.065 + 2) * 22;
+
+        // Uniforms
+        fragMat.uniforms.uTime.value = t;
+        starMat.uniforms.uTime.value = t;
+        composer.passes[composer.passes.length - 1].uniforms.uTime.value = t;
+        composer.render();
+      }
+
+      /* ── EVENTS ── */
+      window.addEventListener("mousemove", (e) => {
+        mouse.tx = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.ty = -(e.clientY / window.innerHeight) * 2 + 1;
+      });
+      window.addEventListener(
+        "touchmove",
+        (e) => {
+          if (e.touches.length) {
+            mouse.tx = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+            mouse.ty = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+          }
+        },
+        { passive: true },
+      );
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        composer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      /* ── PRELOADER ── */
+      const bar = document.getElementById("loader-progress");
+      let prog = 0;
+      const iv = setInterval(() => {
+        prog += Math.random() * 18 + 5;
+        if (prog >= 100) {
+          prog = 100;
+          bar.style.width = "100%";
+          clearInterval(iv);
+          setTimeout(() => {
+            gsap.to("#preloader", {
+              opacity: 0,
+              duration: 0.7,
+              ease: "power2.inOut",
+              onComplete() {
+                document.getElementById("preloader").style.display = "none";
+                runIntro();
+              },
+            });
+          }, 300);
+        } else bar.style.width = prog + "%";
+      }, 80);
+
+      function runIntro() {
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        tl.to(".proj-hero .line-inner", {
+          y: "0%",
+          duration: 1.2,
+          stagger: 0.15,
+        })
+          .to(".section-label", { opacity: 1, x: 0, duration: 0.8 }, "-=0.6")
+          .to(".hero-sub", { opacity: 1, y: 0, duration: 0.8 }, "-=0.4");
+      }
+
+      /* ── SCROLL ANIMATIONS ── */
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".proj-hero", {
+        scrollTrigger: {
+          trigger: ".proj-hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+        opacity: 0,
+        y: -60,
+      });
+
+      gsap.to(".featured-label", {
+        scrollTrigger: {
+          trigger: "#featured",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        duration: 0.8,
+      });
+      gsap.to(".featured-card", {
+        scrollTrigger: {
+          trigger: ".featured-card",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.9,
+      });
+
+      gsap.to(".grid-heading", {
+        scrollTrigger: {
+          trigger: ".grid-heading",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      });
+
+      document.querySelectorAll(".project-card").forEach((card, i) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: i * 0.06,
+        });
+      });
+
+      gsap.to(".oss-heading", {
+        scrollTrigger: {
+          trigger: "#oss",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      });
+      gsap.to(".oss-desc", {
+        scrollTrigger: {
+          trigger: "#oss",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: 0.1,
+      });
+      document.querySelectorAll(".oss-card").forEach((card, i) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: i * 0.06,
+        });
+      });
+
+      animate();
+    </script>
+
+
+    <script src="js/shared.js"></script>
+    <script src="js/projects.js"></script>
+  </body>
+</html>

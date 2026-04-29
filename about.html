@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Alex Rivera | Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/about.css" />
+    
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div id="preloader">
+      <div class="loader-ring"></div>
+      <div class="loader-txt">Mapping Terrain</div>
+      <div class="loader-bar"><span id="loader-progress"></span></div>
+    </div>
+    <div class="page-transition" id="page-transition"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo" data-nav
+        ><div class="logo-icon"></div>
+        NEXUS</a
+      >
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="about.html" class="active" data-nav>About</a></li>
+        <li><a href="skills.html" data-nav>Skills</a></li>
+        <li><a href="projects.html" data-nav>Projects</a></li>
+        <li><a href="experience.html" data-nav>Experience</a></li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="webgl"></canvas>
+
+    <div class="content">
+      <section class="about-hero" id="about-hero">
+        <div class="about-hero-inner">
+          <div class="section-label">// About Me</div>
+          <h1>
+            <span class="line"><span class="line-inner">The Mind</span></span>
+            <span class="line"
+              ><span class="line-inner"
+                >Behind <span class="accent">The Code.</span></span
+              ></span
+            >
+          </h1>
+          <p class="about-hero-text">
+            I'm Alex Rivera — a developer who believes that great software
+            should feel as good as it performs. Based in Austin, TX, I've spent
+            the last 5 years turning complex problems into elegant, scalable
+            solutions that people actually enjoy using.
+          </p>
+        </div>
+      </section>
+
+      <section class="bio-section" id="bio-section">
+        <div class="bio-split">
+          <div class="bio-portrait">
+            <div class="bio-portrait-inner">AR</div>
+            <div class="bio-portrait-glow"></div>
+          </div>
+          <div class="bio-text-col">
+            <h2 class="bio-heading">
+              Bridging <span class="accent">Backend Power</span> with Frontend
+              Polish
+            </h2>
+            <p class="bio-text">
+              My journey began writing Java applets in my college dorm room. I
+              was fascinated by how logic could become visual — how a
+              well-structured backend could power a beautiful frontend. That
+              fascination became my career.
+            </p>
+            <p class="bio-text">
+              Today I architect microservice ecosystems with Spring Boot and
+              craft pixel-perfect React interfaces. I'm the rare developer who
+              speaks both languages fluently — the language of distributed
+              systems and the language of design.
+            </p>
+            <div class="bio-details">
+              <div class="bio-detail">
+                <div class="bio-detail-label">Location</div>
+                <div class="bio-detail-value">
+                  Austin, <span class="accent">TX</span>
+                </div>
+              </div>
+              <div class="bio-detail">
+                <div class="bio-detail-label">Experience</div>
+                <div class="bio-detail-value">
+                  <span class="accent">5</span> Years
+                </div>
+              </div>
+              <div class="bio-detail">
+                <div class="bio-detail-label">Specialization</div>
+                <div class="bio-detail-value">
+                  Full-<span class="accent">Stack</span>
+                </div>
+              </div>
+              <div class="bio-detail">
+                <div class="bio-detail-label">Projects</div>
+                <div class="bio-detail-value">
+                  <span class="accent">30</span>+ Shipped
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey" id="journey">
+        <h2 class="journey-heading">
+          The <span class="accent">Origin</span> Story
+        </h2>
+        <div class="journey-timeline">
+          <div class="journey-item">
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-year">2018</div>
+              <h3 class="journey-title">First Line of Java</h3>
+              <p class="journey-desc">
+                Enrolled in CS at UT Austin. Wrote my first Java program — a
+                terminal-based game engine. Got hooked immediately.
+              </p>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-year">2019</div>
+              <h3 class="journey-title">Discovered the Frontend</h3>
+              <p class="journey-desc">
+                Built my first React app for a hackathon. Won second place.
+                Realized I loved making things look as good as they worked.
+              </p>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-year">2020</div>
+              <h3 class="journey-title">First Real Job</h3>
+              <p class="journey-desc">
+                Joined TechNova as a junior developer. Shipped my first
+                production microservice within 3 weeks. APIs processing 2M+
+                requests daily.
+              </p>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-year">2022</div>
+              <h3 class="journey-title">Lead Engineer</h3>
+              <p class="journey-desc">
+                Promoted to lead a team of 6 at CloudSync Labs. Redesigned the
+                frontend architecture. Migrated monolith to microservices.
+              </p>
+            </div>
+          </div>
+          <div class="journey-item">
+            <div class="journey-dot"></div>
+            <div class="journey-content">
+              <div class="journey-year">2024 — Now</div>
+              <h3 class="journey-title">Senior Architect</h3>
+              <p class="journey-desc">
+                Building next-gen web applications. Consulting for startups.
+                Contributing to open source. Mentoring the next wave of
+                developers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="values" id="values">
+        <h2 class="values-heading">What Drives Me</h2>
+        <div class="values-grid">
+          <div class="value-card">
+            <span class="value-icon">◆</span>
+            <h3 class="value-title">Craftsmanship</h3>
+            <p class="value-desc">
+              Every function is deliberate. Every component is intentional. I
+              treat code like a craft — no shortcuts, just clean architecture.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">◈</span>
+            <h3 class="value-title">Impact Over Output</h3>
+            <p class="value-desc">
+              I measure success not by lines written but by problems solved. One
+              well-designed API beats a hundred thrown-together endpoints.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">◇</span>
+            <h3 class="value-title">Relentless Curiosity</h3>
+            <p class="value-desc">
+              WebGPU, gRPC, server components, edge functions — I'm always
+              exploring what's next. The web evolves daily and I evolve with it.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">▲</span>
+            <h3 class="value-title">User Empathy</h3>
+            <p class="value-desc">
+              Behind every API call is a user. I build with empathy — fast load
+              times, intuitive flows, accessible experiences for everyone.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">○</span>
+            <h3 class="value-title">Collaboration</h3>
+            <p class="value-desc">
+              The best software is built by teams. I communicate clearly, review
+              thoughtfully, and believe elevating teammates elevates the
+              product.
+            </p>
+          </div>
+          <div class="value-card">
+            <span class="value-icon">⬡</span>
+            <h3 class="value-title">Open Source</h3>
+            <p class="value-desc">
+              Knowledge shared is knowledge multiplied. I actively contribute to
+              the tools I use and believe in building in public.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ MY APPROACH ═══ -->
+      <section class="approach" id="approach" style="padding: 10rem 8% 6rem; position: relative; z-index: 2;">
+        <h2 style="font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--white); margin-bottom: 1rem; opacity: 0; transform: translateY(30px);" class="approach-heading">
+          My <span class="accent">Approach</span>
+        </h2>
+        <p style="color: var(--gray); font-size: 1.05rem; max-width: 700px; margin-bottom: 3rem; opacity: 0; transform: translateY(20px);" class="approach-desc">
+          Every project starts with understanding the *why* before writing a single line of code. Here's how I operate.
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+          <div class="approach-step" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; opacity: 0; transform: translateY(30px);">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">01</div>
+            <h3 style="font-family: var(--font-heading); color: var(--white); font-size: 1.15rem; margin-bottom: 0.6rem;">Discovery & Research</h3>
+            <p style="color: var(--gray); font-size: 0.92rem; line-height: 1.7;">Deep-dive into the problem space. Interview stakeholders, audit existing systems, map user flows, and identify the core constraints before committing to any architecture.</p>
+          </div>
+          <div class="approach-step" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; opacity: 0; transform: translateY(30px);">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">02</div>
+            <h3 style="font-family: var(--font-heading); color: var(--white); font-size: 1.15rem; margin-bottom: 0.6rem;">Prototype & Validate</h3>
+            <p style="color: var(--gray); font-size: 0.92rem; line-height: 1.7;">Build fast, throw away what doesn't work. I ship throwaway prototypes to test critical assumptions before investing in production-grade code. Fail fast, learn faster.</p>
+          </div>
+          <div class="approach-step" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; opacity: 0; transform: translateY(30px);">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">03</div>
+            <h3 style="font-family: var(--font-heading); color: var(--white); font-size: 1.15rem; margin-bottom: 0.6rem;">Build & Iterate</h3>
+            <p style="color: var(--gray); font-size: 0.92rem; line-height: 1.7;">Incremental delivery with tight feedback loops. Every sprint ships something usable. CI/CD from day one. Automated testing. Observability baked in, not bolted on.</p>
+          </div>
+          <div class="approach-step" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 2rem; opacity: 0; transform: translateY(30px);">
+            <div style="font-size: 2rem; margin-bottom: 1rem;">04</div>
+            <h3 style="font-family: var(--font-heading); color: var(--white); font-size: 1.15rem; margin-bottom: 0.6rem;">Refine & Elevate</h3>
+            <p style="color: var(--gray); font-size: 0.92rem; line-height: 1.7;">The last 10% is where the magic lives. Performance tuning, accessibility audits, micro-interactions, polished edge cases — the details that separate good from exceptional.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="next-cta">
+        <div class="next-cta-label">Next Dimension</div>
+        <h2 class="next-cta-heading">
+          <a href="skills.html" data-nav>Explore My Skills &rarr;</a>
+        </h2>
+      </section>
+
+      <div class="footer-bar">
+        <span>&copy; 2026 Alex Rivera. Built from scratch.</span>
+        <div class="footer-socials">
+          <a
+            href="https://github.com/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a href="mailto:alex@alexrivera.dev">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import * as THREE from "three";
+      import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+      import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+      import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+      import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+
+      const isMobile = window.innerWidth < 768;
+      const canvas = document.getElementById("webgl");
+      
+      if (canvas) {
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: !isMobile, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setClearColor(0x05060f, 1);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 0.8;
+
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x05060f, 0.008);
+
+        const camera = new THREE.PerspectiveCamera(50, window.innerWidth / window.innerHeight, 0.1, 500);
+        camera.position.set(0, 0, 55);
+
+        const clock = new THREE.Clock();
+        const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+
+        // Lights
+        scene.add(new THREE.AmbientLight(0x080820, 0.4));
+        const l1 = new THREE.PointLight(0x00f0ff, 2, 100);
+        l1.position.set(25, 15, 20);
+        scene.add(l1);
+        const l2 = new THREE.PointLight(0xff00ff, 1.5, 80);
+        l2.position.set(-25, -10, 15);
+        scene.add(l2);
+        const l3 = new THREE.PointLight(0x00ff88, 1, 60);
+        l3.position.set(0, 20, -25);
+        scene.add(l3);
+
+        // Orbital nodes
+        const nodeCount = isMobile ? 20 : 40;
+        const nodes = [];
+        const nodeGroup = new THREE.Group();
+        scene.add(nodeGroup);
+        const colors = [0x00f0ff, 0xff00ff, 0x00ff88, 0xa855f7];
+
+        for (let i = 0; i < nodeCount; i++) {
+          const color = colors[i % colors.length];
+          const size = 0.12 + Math.random() * 0.2;
+          const geo = new THREE.SphereGeometry(size, 10, 10);
+          const mat = new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.6, metalness: 0.6, roughness: 0.2 });
+          const mesh = new THREE.Mesh(geo, mat);
+          const sMat = new THREE.SpriteMaterial({ color, transparent: true, opacity: 0.12, blending: THREE.AdditiveBlending });
+          const sprite = new THREE.Sprite(sMat);
+          sprite.scale.setScalar(size * 5);
+          mesh.add(sprite);
+          mesh.userData = { radius: 8 + Math.random() * 28, speed: (0.04 + Math.random() * 0.12) * (Math.random() > 0.5 ? 1 : -1), tilt: (Math.random() - 0.5) * Math.PI * 0.7, phase: Math.random() * Math.PI * 2, yAmp: (Math.random() - 0.5) * 14 };
+          nodeGroup.add(mesh);
+          nodes.push(mesh);
+        }
+
+        // Connection lines
+        const maxLines = isMobile ? 30 : 60;
+        const lineMat = new THREE.LineBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.04, depthWrite: false, blending: THREE.AdditiveBlending });
+        const lineObjs = [];
+        for (let i = 0; i < maxLines; i++) {
+          const geo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3()]);
+          const line = new THREE.Line(geo, lineMat.clone());
+          line.visible = false;
+          nodeGroup.add(line);
+          lineObjs.push(line);
+        }
+
+        // Stars
+        const starCount = isMobile ? 400 : 1200;
+        const sGeo = new THREE.BufferGeometry();
+        const sPos = new Float32Array(starCount * 3);
+        const sSizes = new Float32Array(starCount);
+        const sColors = new Float32Array(starCount * 3);
+
+        for (let i = 0; i < starCount; i++) {
+          const r = 25 + Math.random() * 140;
+          const th = Math.random() * Math.PI * 2;
+          const ph = Math.acos(2 * Math.random() - 1);
+          sPos[i * 3] = r * Math.sin(ph) * Math.cos(th);
+          sPos[i * 3 + 1] = r * Math.sin(ph) * Math.sin(th);
+          sPos[i * 3 + 2] = r * Math.cos(ph);
+          sSizes[i] = Math.random() * 1 + 0.2;
+          const c = Math.random();
+          if (c < 0.3) { sColors[i * 3] = 0; sColors[i * 3 + 1] = 0.85; sColors[i * 3 + 2] = 1; }
+          else if (c < 0.5) { sColors[i * 3] = 0.8; sColors[i * 3 + 1] = 0; sColors[i * 3 + 2] = 0.8; }
+          else { sColors[i * 3] = 0.55; sColors[i * 3 + 1] = 0.55; sColors[i * 3 + 2] = 0.65; }
+        }
+
+        sGeo.setAttribute("position", new THREE.BufferAttribute(sPos, 3));
+        sGeo.setAttribute("size", new THREE.BufferAttribute(sSizes, 1));
+        sGeo.setAttribute("color", new THREE.BufferAttribute(sColors, 3));
+
+        const sMat = new THREE.ShaderMaterial({
+          uniforms: { uTime: { value: 0 }, uPR: { value: renderer.getPixelRatio() } },
+          vertexShader: `attribute float size; attribute vec3 color; varying vec3 vC; uniform float uTime, uPR; void main(){ vC = color; vec3 p = position; p.x += sin(uTime*0.025 + position.z*0.003)*0.4; p.y += cos(uTime*0.02 + position.x*0.003)*0.4; vec4 mv = modelViewMatrix * vec4(p,1.); gl_PointSize = size * uPR * (40.0 / -mv.z); gl_Position = projectionMatrix * mv; }`,
+          fragmentShader: `varying vec3 vC; void main(){ float d = length(gl_PointCoord - .5); if(d > .5) discard; gl_FragColor = vec4(vC, smoothstep(.5,.0,d) * 0.4); }`,
+          transparent: true,
+          depthWrite: false,
+          blending: THREE.AdditiveBlending
+        });
+        scene.add(new THREE.Points(sGeo, sMat));
+
+        // Rings
+        const ringGeo = new THREE.TorusGeometry(12, 0.03, 6, 100);
+        const r1 = new THREE.Mesh(ringGeo, new THREE.MeshBasicMaterial({ color: 0x00f0ff, transparent: true, opacity: 0.08 }));
+        scene.add(r1);
+        const r2 = new THREE.Mesh(ringGeo.clone(), new THREE.MeshBasicMaterial({ color: 0xff00ff, transparent: true, opacity: 0.05 }));
+        r2.rotation.x = Math.PI / 3;
+        r2.rotation.y = 0.5;
+        scene.add(r2);
+
+        // Post-processing
+        const composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+        if (!isMobile) {
+          composer.addPass(new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.8, 0.5, 0.4));
+        }
+        const compShader = {
+          uniforms: { tDiffuse: { value: null }, uTime: { value: 0 } },
+          vertexShader: `varying vec2 vUv; void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+          fragmentShader: `uniform sampler2D tDiffuse; uniform float uTime; varying vec2 vUv; void main(){ vec2 uv=vUv; vec2 d=uv-.5; float off=length(d)*0.001; float r=texture2D(tDiffuse,uv+d*off).r; float g=texture2D(tDiffuse,uv).g; float b=texture2D(tDiffuse,uv-d*off).b; float vig=1.-dot(d,d)*1.0; vig=smoothstep(0.,1.,vig); gl_FragColor=vec4(vec3(r,g,b)*vig,1.); }`
+        };
+        composer.addPass(new ShaderPass(compShader));
+
+        // Animation
+        function animate() {
+          requestAnimationFrame(animate);
+          const t = clock.getElapsedTime();
+          mouse.x += (mouse.tx - mouse.x) * 0.03;
+          mouse.y += (mouse.ty - mouse.y) * 0.03;
+          camera.position.x += (mouse.x * 4 - camera.position.x) * 0.02;
+          camera.position.y += (mouse.y * 3 - camera.position.y) * 0.02;
+          camera.lookAt(0, 0, 0);
+          nodeGroup.rotation.y = t * 0.025 + mouse.x * 0.15;
+          nodeGroup.rotation.x = Math.sin(t * 0.015) * 0.08 + mouse.y * 0.08;
+          for (const n of nodes) {
+            const u = n.userData;
+            const a = t * u.speed + u.phase;
+            n.position.x = Math.cos(a) * u.radius;
+            n.position.z = Math.sin(a) * u.radius * Math.cos(u.tilt);
+            n.position.y = u.yAmp + Math.sin(a) * u.radius * Math.sin(u.tilt);
+          }
+          let li = 0;
+          for (let i = 0; i < nodes.length && li < maxLines; i++) {
+            for (let j = i + 1; j < nodes.length && li < maxLines; j++) {
+              const dist = nodes[i].position.distanceTo(nodes[j].position);
+              if (dist < 16) {
+                const line = lineObjs[li];
+                const pos = line.geometry.attributes.position;
+                pos.setXYZ(0, nodes[i].position.x, nodes[i].position.y, nodes[i].position.z);
+                pos.setXYZ(1, nodes[j].position.x, nodes[j].position.y, nodes[j].position.z);
+                pos.needsUpdate = true;
+                line.material.opacity = THREE.MathUtils.mapLinear(dist, 3, 16, 0.1, 0.0);
+                line.visible = true;
+                li++;
+              }
+            }
+          }
+          for (let k = li; k < maxLines; k++) lineObjs[k].visible = false;
+          r1.rotation.z = t * 0.03;
+          r2.rotation.z = -t * 0.025;
+          l1.position.x = Math.cos(t * 0.12) * 25;
+          l1.position.z = Math.sin(t * 0.12) * 25;
+          l2.position.x = Math.cos(t * 0.08 + 2) * 20;
+          l2.position.z = Math.sin(t * 0.08 + 2) * 20;
+          sMat.uniforms.uTime.value = t;
+          composer.passes[composer.passes.length - 1].uniforms.uTime.value = t;
+          composer.render();
+        }
+        animate();
+
+        // Events
+        window.addEventListener("mousemove", (e) => { mouse.tx = (e.clientX / window.innerWidth) * 2 - 1; mouse.ty = -(e.clientY / window.innerHeight) * 2 + 1; });
+        window.addEventListener("touchmove", (e) => { if (e.touches.length) { mouse.tx = (e.touches[0].clientX / window.innerWidth) * 2 - 1; mouse.ty = -(e.touches[0].clientY / window.innerHeight) * 2 + 1; } }, { passive: true });
+        window.addEventListener("resize", () => { camera.aspect = window.innerWidth / window.innerHeight; camera.updateProjectionMatrix(); renderer.setSize(window.innerWidth, window.innerHeight); composer.setSize(window.innerWidth, window.innerHeight); });
+      }
+    </script>
+
+    <script src="js/shared.js"></script>
+    <script src="js/about.js"></script>  </body>
+</html>

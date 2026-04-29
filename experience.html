@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Experience — Alex Rivera | Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/experience.css" />
+    
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div id="preloader">
+      <div class="loader-ring"></div>
+      <div class="loader-txt">Tracing Timeline</div>
+      <div class="loader-bar"><span id="loader-progress"></span></div>
+    </div>
+    <div class="page-transition" id="page-transition"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo" data-nav
+        ><div class="logo-icon"></div>
+        NEXUS</a
+      >
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="about.html" data-nav>About</a></li>
+        <li><a href="skills.html" data-nav>Skills</a></li>
+        <li><a href="projects.html" data-nav>Projects</a></li>
+        <li>
+          <a href="experience.html" class="active" data-nav>Experience</a>
+        </li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="webgl"></canvas>
+
+    <div class="content">
+      <!-- ═══ HERO ═══ -->
+      <section class="exp-hero">
+        <div class="exp-hero-inner">
+          <div class="section-label">// Career Path</div>
+          <h1>
+            <span class="line"><span class="line-inner">Where I've</span></span>
+            <span class="line"
+              ><span class="line-inner"
+                ><span class="accent">Grown.</span></span
+              ></span
+            >
+          </h1>
+          <p class="hero-sub">
+            Five years of shipping products, leading teams, and turning
+            complexity into clarity — from junior dev to senior architect.
+          </p>
+        </div>
+      </section>
+
+      <!-- ═══ PROFESSIONAL SUMMARY ═══ -->
+      <section id="summary" style="padding: 8rem 8% 4rem; position: relative; z-index: 2;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;" class="summary-grid">
+          <div>
+            <h2 class="summary-heading" style="font-family: var(--font-heading); font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--white); margin-bottom: 1rem; opacity: 0; transform: translateY(20px);">
+              Engineering <span class="accent">at Scale</span>
+            </h2>
+            <p class="summary-text" style="color: var(--gray); font-size: 1rem; line-height: 1.8; opacity: 0; transform: translateY(15px);">
+              I've spent the last five years building software that serves millions of users — from distributed microservice architectures handling 50k+ req/sec to interactive 3D web experiences that push what browsers can do. My work sits at the intersection of performance engineering and creative technology.
+            </p>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="summary-stat" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 1.5rem; text-align: center; opacity: 0; transform: translateY(20px);">
+              <div style="color: var(--cyan); font-family: var(--font-heading); font-size: 2rem;">15+</div>
+              <div style="color: var(--gray); font-size: 0.82rem; margin-top: 0.4rem;">Team Members Led</div>
+            </div>
+            <div class="summary-stat" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 1.5rem; text-align: center; opacity: 0; transform: translateY(20px);">
+              <div style="color: var(--magenta); font-family: var(--font-heading); font-size: 2rem;">99.9%</div>
+              <div style="color: var(--gray); font-size: 0.82rem; margin-top: 0.4rem;">Uptime Achieved</div>
+            </div>
+            <div class="summary-stat" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 1.5rem; text-align: center; opacity: 0; transform: translateY(20px);">
+              <div style="color: var(--lime); font-family: var(--font-heading); font-size: 2rem;">2M+</div>
+              <div style="color: var(--gray); font-size: 0.82rem; margin-top: 0.4rem;">Daily API Requests</div>
+            </div>
+            <div class="summary-stat" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 14px; padding: 1.5rem; text-align: center; opacity: 0; transform: translateY(20px);">
+              <div style="color: var(--purple); font-family: var(--font-heading); font-size: 2rem;">40%</div>
+              <div style="color: var(--gray); font-size: 0.82rem; margin-top: 0.4rem;">Cost Reduction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ TIMELINE ═══ -->
+      <section class="timeline-section" id="timeline">
+        <h2 class="timeline-heading">
+          Professional <span class="accent">Timeline</span>
+        </h2>
+
+        <div class="timeline">
+          <!-- Role 1 — Current -->
+          <div class="tl-item">
+            <div class="tl-node"></div>
+            <div class="tl-card">
+              <div class="tl-period">
+                <span class="dates">2024 — Present</span>
+                <span class="duration">2 yrs</span>
+              </div>
+              <h3 class="tl-role">Senior Software Architect</h3>
+              <div class="tl-company">
+                Nexus Digital — <span class="accent">Remote</span>
+              </div>
+              <p class="tl-desc">
+                Leading architecture for a suite of SaaS products serving 500k+
+                users. Designing distributed systems, mentoring a team of 8, and
+                establishing engineering standards across the org.
+              </p>
+              <div class="tl-highlights">
+                <div class="tl-highlight">
+                  Redesigned core platform to event-driven microservices — 60%
+                  latency reduction
+                </div>
+                <div class="tl-highlight">
+                  Built real-time collaboration engine with CRDTs processing 2M+
+                  daily operations
+                </div>
+                <div class="tl-highlight">
+                  Established design system used across 4 product teams,
+                  reducing UI inconsistencies by 80%
+                </div>
+                <div class="tl-highlight">
+                  Introduced CI/CD pipeline that cut deployment time from 45min
+                  to 8min
+                </div>
+              </div>
+              <div class="tl-stack">
+                <span>React</span><span>TypeScript</span><span>Spring Boot</span
+                ><span>Kafka</span><span>K8s</span><span>PostgreSQL</span
+                ><span>Redis</span><span>AWS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="tl-item">
+            <div class="tl-node"></div>
+            <div class="tl-card">
+              <div class="tl-period">
+                <span class="dates">2022 — 2024</span>
+                <span class="duration">2 yrs</span>
+              </div>
+              <h3 class="tl-role">Lead Full-Stack Engineer</h3>
+              <div class="tl-company">
+                CloudSync Labs — <span class="accent">Austin, TX</span>
+              </div>
+              <p class="tl-desc">
+                Led a cross-functional team of 6 building a cloud collaboration
+                platform. Owned both frontend architecture (React/Next.js) and
+                backend services (Spring Boot microservices).
+              </p>
+              <div class="tl-highlights">
+                <div class="tl-highlight">
+                  Migrated monolithic Java backend to 12 Spring Boot
+                  microservices
+                </div>
+                <div class="tl-highlight">
+                  Rebuilt frontend with Next.js App Router — Lighthouse score
+                  jumped from 62 to 97
+                </div>
+                <div class="tl-highlight">
+                  Designed and shipped plugin marketplace generating $120k ARR
+                  in first year
+                </div>
+                <div class="tl-highlight">
+                  Mentored 3 junior developers, all promoted within 18 months
+                </div>
+              </div>
+              <div class="tl-stack">
+                <span>Next.js</span><span>Spring Boot</span
+                ><span>PostgreSQL</span><span>Docker</span
+                ><span>GitHub Actions</span><span>Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="tl-item">
+            <div class="tl-node"></div>
+            <div class="tl-card">
+              <div class="tl-period">
+                <span class="dates">2020 — 2022</span>
+                <span class="duration">2 yrs</span>
+              </div>
+              <h3 class="tl-role">Full-Stack Developer</h3>
+              <div class="tl-company">
+                TechNova Inc. — <span class="accent">Austin, TX</span>
+              </div>
+              <p class="tl-desc">
+                First professional role. Shipped production APIs within 3 weeks.
+                Grew from writing CRUD endpoints to designing full microservice
+                architectures.
+              </p>
+              <div class="tl-highlights">
+                <div class="tl-highlight">
+                  Built 8 production REST APIs processing 2M+ requests/day
+                </div>
+                <div class="tl-highlight">
+                  Created internal React component library adopted by 3 teams
+                </div>
+                <div class="tl-highlight">
+                  Implemented real-time notification system with WebSockets and
+                  Redis Pub/Sub
+                </div>
+                <div class="tl-highlight">
+                  Reduced API response times by 40% through query optimization
+                  and caching
+                </div>
+              </div>
+              <div class="tl-stack">
+                <span>Java</span><span>Spring</span><span>React</span
+                ><span>MongoDB</span><span>Redis</span><span>Jenkins</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 4 — Internship -->
+          <div class="tl-item">
+            <div class="tl-node"></div>
+            <div class="tl-card">
+              <div class="tl-period">
+                <span class="dates">2019 — 2020</span>
+                <span class="duration">1 yr</span>
+              </div>
+              <h3 class="tl-role">Software Engineering Intern</h3>
+              <div class="tl-company">
+                DataPulse — <span class="accent">Austin, TX</span>
+              </div>
+              <p class="tl-desc">
+                Summer internship turned part-time role. Got hands-on with
+                production codebases, agile workflows, and learned how teams
+                ship software at scale.
+              </p>
+              <div class="tl-highlights">
+                <div class="tl-highlight">
+                  Built admin dashboard with React and Node.js for internal
+                  analytics
+                </div>
+                <div class="tl-highlight">
+                  Automated data pipeline testing, cutting QA time by 30%
+                </div>
+                <div class="tl-highlight">
+                  Won "Intern Impact Award" for shipping fastest feature request
+                  turnaround
+                </div>
+              </div>
+              <div class="tl-stack">
+                <span>JavaScript</span><span>Node.js</span><span>React</span
+                ><span>Python</span><span>SQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ EDUCATION ═══ -->
+      <section class="edu-section" id="education">
+        <h2 class="edu-heading">
+          Education & <span class="accent">Learning</span>
+        </h2>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <div class="edu-year">2018 — 2022</div>
+            <h3 class="edu-degree">B.S. Computer Science</h3>
+            <div class="edu-school">University of Texas at Austin</div>
+            <p class="edu-note">
+              Dean's List. Focus in distributed systems and human-computer
+              interaction. Senior thesis on real-time collaboration protocols.
+            </p>
+          </div>
+          <div class="edu-card">
+            <div class="edu-year">Ongoing</div>
+            <h3 class="edu-degree">Continuous Learning</h3>
+            <div class="edu-school">Self-Directed</div>
+            <p class="edu-note">
+              WebGPU fundamentals, advanced GLSL shaders, system design at
+              scale, Rust for performance-critical services, and contributing to
+              open source.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ CERTIFICATIONS ═══ -->
+      <section class="cert-section" id="certs">
+        <h2 class="cert-heading">
+          Certifications & <span class="accent">Credentials</span>
+        </h2>
+        <div class="cert-strip">
+          <div class="cert-badge">
+            <div class="cert-icon">☁</div>
+            <div class="cert-info">
+              <div class="cert-name">AWS Solutions Architect</div>
+              <div class="cert-issuer">Amazon Web Services — 2023</div>
+            </div>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">⬡</div>
+            <div class="cert-info">
+              <div class="cert-name">Spring Professional</div>
+              <div class="cert-issuer">VMware / Broadcom — 2022</div>
+            </div>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-icon">◈</div>
+            <div class="cert-info">
+              <div class="cert-name">Google UX Design</div>
+              <div class="cert-issuer">Google / Coursera — 2021</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ NEXT CTA ═══ -->
+      <section class="next-cta">
+        <div class="next-cta-label">Final Dimension</div>
+        <h2 class="next-cta-heading">
+          <a href="contact.html" data-nav>Get In Touch &rarr;</a>
+        </h2>
+      </section>
+
+      <div class="footer-bar">
+        <span>&copy; 2026 Alex Rivera. Built from scratch.</span>
+        <div class="footer-socials">
+          <a
+            href="https://github.com/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a href="mailto:alex@alexrivera.dev">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import * as THREE from "three";
+      import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+      import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+      import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+      import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+
+      /* ════════════════════════════════════════════════════════
+           3D SCENE: "The Ascending Helix"
+           — A double-helix DNA-like structure of glowing orbs
+             spiralling upward continuously — symbolizing growth
+             and evolution. Floating crystals orbit around it.
+             Particle dust drifts through the space.
+        ════════════════════════════════════════════════════════ */
+
+      const isMobile = window.innerWidth < 768;
+      const canvas = document.getElementById("webgl");
+      const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: !isMobile,
+        alpha: true,
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x05060f, 1);
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 0.85;
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x05060f, 0.007);
+
+      const camera = new THREE.PerspectiveCamera(
+        50,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        500,
+      );
+      camera.position.set(0, 0, 55);
+
+      const clock = new THREE.Clock();
+      const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+
+      /* ── LIGHTS ── */
+      scene.add(new THREE.AmbientLight(0x0a0a20, 0.4));
+      const l1 = new THREE.PointLight(0x00f0ff, 2, 100);
+      l1.position.set(20, 15, 25);
+      scene.add(l1);
+      const l2 = new THREE.PointLight(0xff00ff, 1.5, 80);
+      l2.position.set(-20, -10, 20);
+      scene.add(l2);
+      const l3 = new THREE.PointLight(0xa855f7, 1.2, 70);
+      l3.position.set(0, 20, -20);
+      scene.add(l3);
+
+      /* ── DOUBLE HELIX ── */
+      const helixGroup = new THREE.Group();
+      scene.add(helixGroup);
+      const helixOrbs = [];
+      const orbCount = isMobile ? 40 : 80;
+      const helixRadius = 6;
+      const helixHeight = 50;
+      const cOrbGeo = new THREE.SphereGeometry(0.2, 8, 8);
+
+      for (let strand = 0; strand < 2; strand++) {
+        const offset = strand * Math.PI;
+        const color = strand === 0 ? 0x00f0ff : 0xff00ff;
+        for (let i = 0; i < orbCount; i++) {
+          const t = (i / orbCount) * Math.PI * 6;
+          const y = (i / orbCount) * helixHeight - helixHeight / 2;
+
+          const mat = new THREE.MeshStandardMaterial({
+            color,
+            emissive: color,
+            emissiveIntensity: 0.6,
+            metalness: 0.5,
+            roughness: 0.3,
+          });
+          const orb = new THREE.Mesh(cOrbGeo, mat);
+          orb.position.set(
+            Math.cos(t + offset) * helixRadius,
+            y,
+            Math.sin(t + offset) * helixRadius,
+          );
+
+          // Glow
+          const sp = new THREE.Sprite(
+            new THREE.SpriteMaterial({
+              color,
+              transparent: true,
+              opacity: 0.1,
+              blending: THREE.AdditiveBlending,
+            }),
+          );
+          sp.scale.setScalar(1.2);
+          orb.add(sp);
+
+          orb.userData = { baseY: y, t, offset, strand, idx: i };
+          helixGroup.add(orb);
+          helixOrbs.push(orb);
+        }
+      }
+
+      // Cross-links between strands
+      const linkMat = new THREE.LineBasicMaterial({
+        color: 0xa855f7,
+        transparent: true,
+        opacity: 0.06,
+        blending: THREE.AdditiveBlending,
+        depthWrite: false,
+      });
+      const links = [];
+      for (let i = 0; i < orbCount; i += 3) {
+        const geo = new THREE.BufferGeometry().setFromPoints([
+          new THREE.Vector3(),
+          new THREE.Vector3(),
+        ]);
+        const line = new THREE.Line(geo, linkMat.clone());
+        helixGroup.add(line);
+        links.push({ line, i });
+      }
+
+      /* ── ORBITING CRYSTALS ── */
+      const crystals = [];
+      const crystalCount = isMobile ? 6 : 12;
+      const cGeo = new THREE.OctahedronGeometry(0.5, 0);
+
+      for (let i = 0; i < crystalCount; i++) {
+        const col = [0x00f0ff, 0xff00ff, 0x00ff88, 0xa855f7][i % 4];
+        const mat = new THREE.MeshStandardMaterial({
+          color: col,
+          emissive: col,
+          emissiveIntensity: 0.4,
+          metalness: 0.8,
+          roughness: 0.2,
+          wireframe: true,
+        });
+        const mesh = new THREE.Mesh(cGeo, mat);
+        const sp = new THREE.Sprite(
+          new THREE.SpriteMaterial({
+            color: col,
+            transparent: true,
+            opacity: 0.08,
+            blending: THREE.AdditiveBlending,
+          }),
+        );
+        sp.scale.setScalar(3);
+        mesh.add(sp);
+
+        mesh.userData = {
+          radius: 14 + Math.random() * 10,
+          speed: 0.15 + Math.random() * 0.3,
+          ySpeed: 0.1 + Math.random() * 0.15,
+          yAmp: 8 + Math.random() * 12,
+          phase: Math.random() * Math.PI * 2,
+          rSpeed: {
+            x: (Math.random() - 0.5) * 0.02,
+            y: (Math.random() - 0.5) * 0.02,
+          },
+        };
+        scene.add(mesh);
+        crystals.push(mesh);
+      }
+
+      /* ── PARTICLE DUST ── */
+      const dustCount = isMobile ? 300 : 800;
+      const dGeo = new THREE.BufferGeometry();
+      const dPos = new Float32Array(dustCount * 3);
+      const dSizes = new Float32Array(dustCount);
+      const dColors = new Float32Array(dustCount * 3);
+      const palette = [
+        new THREE.Color(0x00f0ff),
+        new THREE.Color(0xff00ff),
+        new THREE.Color(0xa855f7),
+      ];
+
+      for (let i = 0; i < dustCount; i++) {
+        dPos[i * 3] = (Math.random() - 0.5) * 80;
+        dPos[i * 3 + 1] = (Math.random() - 0.5) * 60;
+        dPos[i * 3 + 2] = (Math.random() - 0.5) * 80;
+        dSizes[i] = 0.2 + Math.random() * 0.6;
+        const c = palette[Math.floor(Math.random() * 3)];
+        dColors[i * 3] = c.r;
+        dColors[i * 3 + 1] = c.g;
+        dColors[i * 3 + 2] = c.b;
+      }
+      dGeo.setAttribute("position", new THREE.BufferAttribute(dPos, 3));
+      dGeo.setAttribute("size", new THREE.BufferAttribute(dSizes, 1));
+      dGeo.setAttribute("color", new THREE.BufferAttribute(dColors, 3));
+
+      const dustMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uPR: { value: renderer.getPixelRatio() },
+        },
+        vertexShader: `
+                attribute float size; attribute vec3 color;
+                varying vec3 vC; varying float vA;
+                uniform float uTime, uPR;
+                void main(){
+                    vC = color;
+                    vec3 p = position;
+                    p.y = mod(p.y + uTime * 0.8, 60.0) - 30.0;
+                    p.x += sin(uTime * 0.1 + position.z * 0.03) * 0.6;
+                    p.z += cos(uTime * 0.08 + position.x * 0.03) * 0.6;
+                    vec4 mv = modelViewMatrix * vec4(p, 1.0);
+                    gl_PointSize = size * uPR * (25.0 / -mv.z);
+                    vA = smoothstep(30.0, 10.0, abs(p.y));
+                    gl_Position = projectionMatrix * mv;
+                }
+            `,
+        fragmentShader: `
+                varying vec3 vC; varying float vA;
+                void main(){
+                    float d = length(gl_PointCoord - 0.5);
+                    if(d > 0.5) discard;
+                    gl_FragColor = vec4(vC, smoothstep(0.5, 0.0, d) * 0.3 * vA);
+                }
+            `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      });
+      scene.add(new THREE.Points(dGeo, dustMat));
+
+      /* ── BACKGROUND STARS ── */
+      const starCount = isMobile ? 250 : 600;
+      const stGeo = new THREE.BufferGeometry();
+      const stPos = new Float32Array(starCount * 3);
+      const stSizes = new Float32Array(starCount);
+      for (let i = 0; i < starCount; i++) {
+        const r = 50 + Math.random() * 110;
+        const th = Math.random() * Math.PI * 2;
+        const ph = Math.acos(2 * Math.random() - 1);
+        stPos[i * 3] = r * Math.sin(ph) * Math.cos(th);
+        stPos[i * 3 + 1] = r * Math.sin(ph) * Math.sin(th);
+        stPos[i * 3 + 2] = r * Math.cos(ph);
+        stSizes[i] = Math.random() * 0.5 + 0.1;
+      }
+      stGeo.setAttribute("position", new THREE.BufferAttribute(stPos, 3));
+      stGeo.setAttribute("size", new THREE.BufferAttribute(stSizes, 1));
+      const starMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uPR: { value: renderer.getPixelRatio() },
+        },
+        vertexShader: `
+                attribute float size; uniform float uTime, uPR; varying float vA;
+                void main(){ vec4 mv = modelViewMatrix * vec4(position,1.); gl_PointSize = size*uPR*(30./-mv.z);
+                vA = sin(uTime*(0.4+size)+position.x)*0.3+0.7; gl_Position = projectionMatrix*mv; }
+            `,
+        fragmentShader: `
+                varying float vA; void main(){ float d=length(gl_PointCoord-.5); if(d>.5) discard;
+                gl_FragColor=vec4(.45,.5,.65,smoothstep(.5,0.,d)*.2*vA); }
+            `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      });
+      scene.add(new THREE.Points(stGeo, starMat));
+
+      /* ── DECORATIVE RINGS ── */
+      const rMat = (c) =>
+        new THREE.MeshBasicMaterial({
+          color: c,
+          transparent: true,
+          opacity: 0.05,
+          blending: THREE.AdditiveBlending,
+        });
+      const tGeo = new THREE.TorusGeometry(16, 0.025, 6, 120);
+      const ring1 = new THREE.Mesh(tGeo, rMat(0xa855f7));
+      ring1.rotation.x = Math.PI / 2.5;
+      scene.add(ring1);
+      const ring2 = new THREE.Mesh(tGeo.clone(), rMat(0x00f0ff));
+      ring2.rotation.x = Math.PI / 3;
+      ring2.rotation.z = 0.5;
+      scene.add(ring2);
+
+      /* ── POST-PROCESSING ── */
+      const composer = new EffectComposer(renderer);
+      composer.addPass(new RenderPass(scene, camera));
+      if (!isMobile) {
+        composer.addPass(
+          new UnrealBloomPass(
+            new THREE.Vector2(window.innerWidth, window.innerHeight),
+            0.7,
+            0.4,
+            0.35,
+          ),
+        );
+      }
+      const compShader = {
+        uniforms: { tDiffuse: { value: null }, uTime: { value: 0 } },
+        vertexShader: `varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+        fragmentShader: `
+                uniform sampler2D tDiffuse; uniform float uTime; varying vec2 vUv;
+                void main(){
+                    vec2 uv=vUv; vec2 d=uv-.5;
+                    float ca=length(d)*.001;
+                    float r=texture2D(tDiffuse,uv+d*ca).r;
+                    float g=texture2D(tDiffuse,uv).g;
+                    float b=texture2D(tDiffuse,uv-d*ca).b;
+                    float vig=1.-dot(d,d)*.9; vig=smoothstep(0.,1.,vig);
+                    gl_FragColor=vec4(vec3(r,g,b)*vig,1.);
+                }
+            `,
+      };
+      composer.addPass(new ShaderPass(compShader));
+
+      /* ── ANIMATE ── */
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = clock.getElapsedTime();
+
+        mouse.x += (mouse.tx - mouse.x) * 0.03;
+        mouse.y += (mouse.ty - mouse.y) * 0.03;
+
+        camera.position.x += (mouse.x * 4 - camera.position.x) * 0.015;
+        camera.position.y += (mouse.y * 3 - camera.position.y) * 0.015;
+        camera.lookAt(0, 0, 0);
+
+        // Helix rotation
+        helixGroup.rotation.y = t * 0.06 + mouse.x * 0.1;
+
+        // Helix orbs — scroll upward, wrap
+        for (const orb of helixOrbs) {
+          const u = orb.userData;
+          const newY = ((u.baseY + t * 2) % helixHeight) - helixHeight / 2;
+          const newT = u.t + t * 0.5;
+          orb.position.x = Math.cos(newT + u.offset) * helixRadius;
+          orb.position.y = newY;
+          orb.position.z = Math.sin(newT + u.offset) * helixRadius;
+        }
+
+        // Cross-links
+        for (const { line, i } of links) {
+          const a = helixOrbs[i];
+          const b = helixOrbs[i + orbCount];
+          if (a && b) {
+            const pa = line.geometry.attributes.position.array;
+            pa[0] = a.position.x;
+            pa[1] = a.position.y;
+            pa[2] = a.position.z;
+            pa[3] = b.position.x;
+            pa[4] = b.position.y;
+            pa[5] = b.position.z;
+            line.geometry.attributes.position.needsUpdate = true;
+            const dist = a.position.distanceTo(b.position);
+            line.material.opacity = THREE.MathUtils.mapLinear(
+              dist,
+              2,
+              14,
+              0.08,
+              0.01,
+            );
+          }
+        }
+
+        // Crystals orbit
+        for (const c of crystals) {
+          const u = c.userData;
+          const a = t * u.speed + u.phase;
+          c.position.x = Math.cos(a) * u.radius;
+          c.position.y = Math.sin(t * u.ySpeed) * u.yAmp;
+          c.position.z = Math.sin(a) * u.radius;
+          c.rotation.x += u.rSpeed.x;
+          c.rotation.y += u.rSpeed.y;
+        }
+
+        // Rings
+        ring1.rotation.z = t * 0.015;
+        ring2.rotation.z = -t * 0.012;
+
+        // Lights orbit
+        l1.position.x = Math.cos(t * 0.1) * 22;
+        l1.position.z = Math.sin(t * 0.1) * 22;
+        l2.position.x = Math.cos(t * 0.07 + 2) * 20;
+        l2.position.z = Math.sin(t * 0.07 + 2) * 20;
+
+        // Uniforms
+        dustMat.uniforms.uTime.value = t;
+        starMat.uniforms.uTime.value = t;
+        composer.passes[composer.passes.length - 1].uniforms.uTime.value = t;
+        composer.render();
+      }
+
+      /* ── EVENTS ── */
+      window.addEventListener("mousemove", (e) => {
+        mouse.tx = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.ty = -(e.clientY / window.innerHeight) * 2 + 1;
+      });
+      window.addEventListener(
+        "touchmove",
+        (e) => {
+          if (e.touches.length) {
+            mouse.tx = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+            mouse.ty = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+          }
+        },
+        { passive: true },
+      );
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        composer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      /* ── PRELOADER ── */
+      const bar = document.getElementById("loader-progress");
+      let prog = 0;
+      const iv = setInterval(() => {
+        prog += Math.random() * 18 + 5;
+        if (prog >= 100) {
+          prog = 100;
+          bar.style.width = "100%";
+          clearInterval(iv);
+          setTimeout(() => {
+            gsap.to("#preloader", {
+              opacity: 0,
+              duration: 0.7,
+              ease: "power2.inOut",
+              onComplete() {
+                document.getElementById("preloader").style.display = "none";
+                runIntro();
+              },
+            });
+          }, 300);
+        } else bar.style.width = prog + "%";
+      }, 80);
+
+      function runIntro() {
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        tl.to(".exp-hero .line-inner", {
+          y: "0%",
+          duration: 1.2,
+          stagger: 0.15,
+        })
+          .to(".section-label", { opacity: 1, x: 0, duration: 0.8 }, "-=.6")
+          .to(".hero-sub", { opacity: 1, y: 0, duration: 0.8 }, "-=.4");
+      }
+
+      /* ── SCROLL ANIMATIONS ── */
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".exp-hero", {
+        scrollTrigger: {
+          trigger: ".exp-hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+        opacity: 0,
+        y: -60,
+      });
+
+      // Professional Summary section
+      gsap.to(".summary-heading", {
+        scrollTrigger: {
+          trigger: "#summary",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      });
+      gsap.to(".summary-text", {
+        scrollTrigger: {
+          trigger: "#summary",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: 0.15,
+      });
+      document.querySelectorAll(".summary-stat").forEach((stat, i) => {
+        gsap.to(stat, {
+          scrollTrigger: {
+            trigger: stat,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: i * 0.1,
+        });
+      });
+
+      gsap.to(".timeline-heading", {
+        scrollTrigger: {
+          trigger: ".timeline-heading",
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      });
+
+      document.querySelectorAll(".tl-item").forEach((item, i) => {
+        gsap.to(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+            onEnter: () => item.classList.add("visible"),
+            onLeaveBack: () => item.classList.remove("visible"),
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: i * 0.05,
+        });
+      });
+
+      gsap.to(".edu-heading", {
+        scrollTrigger: {
+          trigger: "#education",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      });
+      document.querySelectorAll(".edu-card").forEach((card, i) => {
+        gsap.to(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: i * 0.08,
+        });
+      });
+
+      gsap.to(".cert-heading", {
+        scrollTrigger: {
+          trigger: "#certs",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      });
+      document.querySelectorAll(".cert-badge").forEach((badge, i) => {
+        gsap.to(badge, {
+          scrollTrigger: {
+            trigger: badge,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: i * 0.08,
+        });
+      });
+
+      animate();
+    </script>
+
+
+    <script src="js/shared.js"></script>
+    <script src="js/experience.js"></script>
+  </body>
+</html>

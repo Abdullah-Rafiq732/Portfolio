@@ -1,0 +1,1480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Rivera | Developer Nexus</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <!-- ═══════ SCROLL PROGRESS ═══════ -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- ═══════ PRELOADER ═══════ -->
+    <div id="preloader">
+        <div class="loader-shape"></div>
+        <div class="loader-text">Initializing Nexus</div>
+        <div class="loader-bar"><div class="loader-bar-inner" id="loader-progress"></div></div>
+    </div>
+
+    <!-- ═══════ PAGE TRANSITION ═══════ -->
+    <div class="page-transition" id="page-transition"></div>
+
+    <!-- ═══════ CUSTOM CURSOR ═══════ -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <!-- ═══════ NAVBAR ═══════ -->
+    <nav id="navbar">
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon"></div>
+            NEXUS
+        </a>
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html" class="active" data-nav>Home</a></li>
+            <li><a href="about.html" data-nav>About</a></li>
+            <li><a href="skills.html" data-nav>Skills</a></li>
+            <li><a href="projects.html" data-nav>Projects</a></li>
+            <li><a href="experience.html" data-nav>Experience</a></li>
+            <li><a href="contact.html" data-nav>Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- ═══════ THREE.JS CANVAS ═══════ -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- ═══════ CONTENT ═══════ -->
+    <div class="content-wrapper">
+
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero-label">Java Developer &amp; Frontend Engineer</div>
+            <h1 class="hero-name">
+                <span class="line"><span class="line-inner">Alex</span></span>
+                <span class="line"><span class="line-inner">Rivera.</span></span>
+            </h1>
+            <p class="hero-tagline">Crafting digital universes at the intersection of logic and art. I build systems that scale and interfaces that inspire.</p>
+            <div class="hero-cta-group">
+                <a href="projects.html" class="btn btn-primary" data-nav data-magnetic>View Work</a>
+                <a href="contact.html" class="btn btn-ghost" data-nav data-magnetic>Get In Touch</a>
+            </div>
+            <div class="hero-scroll-indicator" id="scroll-indicator">
+                <div class="hero-scroll-line"></div>
+                <span class="hero-scroll-text">Scroll to explore</span>
+            </div>
+        </section>
+
+        <!-- MANIFESTO -->
+        <section class="manifesto" id="manifesto">
+            <div class="manifesto-label">// Philosophy</div>
+            <p class="manifesto-text" id="manifesto-text">
+                I don't just write code — I architect experiences. From resilient Java microservices handling millions of requests, to pixel-perfect React interfaces that feel alive. Every commit is intentional. Every deploy is a statement. I believe the best software is invisible — it just works, beautifully.
+            </p>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats" id="stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="30">0</div>
+                    <div class="stat-label">Projects Shipped</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="12">0</div>
+                    <div class="stat-label">Technologies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ SERVICES ═══════ -->
+        <section class="services" id="services">
+            <div class="services-header">
+                <div class="services-label">// What I Do</div>
+                <h2 class="services-title">Crafting Digital <span class="accent">Solutions</span></h2>
+                <p class="services-sub">From backend architecture to pixel-perfect frontends, I deliver end-to-end solutions that scale with your ambition.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">⚙</div>
+                    <h3>Backend Architecture</h3>
+                    <p>Designing resilient microservice ecosystems that handle millions of requests. Event-driven, fault-tolerant, and built for scale from day one.</p>
+                    <div class="service-tags">
+                        <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">◈</div>
+                    <h3>Frontend Engineering</h3>
+                    <p>Building interactive interfaces that feel alive. Component-driven architectures with smooth animations, responsive layouts, and obsessive attention to detail.</p>
+                    <div class="service-tags">
+                        <span>React</span><span>TypeScript</span><span>Next.js</span><span>GSAP</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">△</div>
+                    <h3>Creative Development</h3>
+                    <p>Pushing boundaries with WebGL, 3D experiences, and generative art. Making the web feel less like a document and more like an experience.</p>
+                    <div class="service-tags">
+                        <span>Three.js</span><span>GLSL</span><span>WebGPU</span><span>Canvas</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">☁</div>
+                    <h3>Cloud & DevOps</h3>
+                    <p>Containerized deployments with CI/CD pipelines, infrastructure-as-code, and monitoring that catches issues before users do.</p>
+                    <div class="service-tags">
+                        <span>Docker</span><span>K8s</span><span>AWS</span><span>Terraform</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⬡</div>
+                    <h3>API Design & Integration</h3>
+                    <p>RESTful and GraphQL APIs that are a pleasure to consume. Thorough documentation, rate limiting, auth flows, and versioning baked in.</p>
+                    <div class="service-tags">
+                        <span>REST</span><span>GraphQL</span><span>gRPC</span><span>OAuth2</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">◉</div>
+                    <h3>Performance Optimization</h3>
+                    <p>Sub-second load times, 99+ Lighthouse scores, and databases that don't buckle under pressure. Speed isn't a feature — it's the foundation.</p>
+                    <div class="service-tags">
+                        <span>Redis</span><span>CDN</span><span>Profiling</span><span>Caching</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ FEATURED SHOWCASE ═══════ -->
+        <section class="showcase" id="showcase">
+            <div class="showcase-header">
+                <div class="showcase-label">// Selected Work</div>
+                <h2 class="showcase-title">Featured <span class="accent">Projects</span></h2>
+            </div>
+            <div class="showcase-cards">
+                <div class="showcase-card">
+                    <div class="showcase-card-visual">
+                        <div class="visual-bg" style="background: linear-gradient(135deg, rgba(0,240,255,0.1), rgba(0,240,255,0.02));"></div>
+                        <div class="visual-overlay">
+                            <div class="visual-mock">
+                                <div class="visual-mock-bar"><span></span><span></span><span></span></div>
+                                <div class="visual-mock-content">
+                                    <div class="visual-mock-line" style="width:75%; background:var(--cyan);"></div>
+                                    <div class="visual-mock-line" style="width:100%; background:var(--magenta);"></div>
+                                    <div class="visual-mock-line" style="width:50%; background:var(--gray);"></div>
+                                    <div class="visual-mock-line" style="width:85%; background:var(--cyan); margin-top:auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-card-body">
+                        <div class="showcase-card-type" style="color:var(--cyan);">Full-Stack Platform</div>
+                        <h3>CloudSync — Collaboration Engine</h3>
+                        <p>Real-time collaboration platform with CRDT-based conflict resolution, processing 2M+ daily requests across distributed workspaces.</p>
+                        <div class="showcase-card-stack">
+                            <span>React</span><span>Spring Boot</span><span>WebSockets</span><span>Redis</span>
+                        </div>
+                        <a href="projects.html" class="showcase-card-link" data-nav>View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-card-visual">
+                        <div class="visual-bg" style="background: linear-gradient(135deg, rgba(255,0,255,0.1), rgba(255,0,255,0.02));"></div>
+                        <div class="visual-overlay">
+                            <div class="visual-mock">
+                                <div class="visual-mock-bar"><span></span><span></span><span></span></div>
+                                <div class="visual-mock-content">
+                                    <div class="visual-mock-line" style="width:60%; background:var(--magenta);"></div>
+                                    <div class="visual-mock-line" style="width:90%; background:var(--purple);"></div>
+                                    <div class="visual-mock-line" style="width:40%; background:var(--gray);"></div>
+                                    <div class="visual-mock-line" style="width:70%; background:var(--magenta); margin-top:auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-card-body">
+                        <div class="showcase-card-type" style="color:var(--magenta);">E-Commerce SaaS</div>
+                        <h3>NovaMart — Headless Storefront</h3>
+                        <p>Headless e-commerce platform with dynamic pricing, real-time inventory, and a 98 Lighthouse score. Built from scratch for 100k+ SKUs.</p>
+                        <div class="showcase-card-stack">
+                            <span>Next.js</span><span>tRPC</span><span>Stripe</span><span>Prisma</span>
+                        </div>
+                        <a href="projects.html" class="showcase-card-link" data-nav>View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-card-visual">
+                        <div class="visual-bg" style="background: linear-gradient(135deg, rgba(0,255,136,0.1), rgba(0,255,136,0.02));"></div>
+                        <div class="visual-overlay">
+                            <div class="visual-mock">
+                                <div class="visual-mock-bar"><span></span><span></span><span></span></div>
+                                <div class="visual-mock-content">
+                                    <div class="visual-mock-line" style="width:80%; background:var(--lime);"></div>
+                                    <div class="visual-mock-line" style="width:55%; background:var(--cyan);"></div>
+                                    <div class="visual-mock-line" style="width:100%; background:var(--gray);"></div>
+                                    <div class="visual-mock-line" style="width:65%; background:var(--lime); margin-top:auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-card-body">
+                        <div class="showcase-card-type" style="color:var(--lime);">DevTool CLI</div>
+                        <h3>DeployPilot — Zero-Config Deploy</h3>
+                        <p>CLI tool that auto-detects project type, provisions cloud infrastructure, and ships to production in under 60 seconds flat.</p>
+                        <div class="showcase-card-stack">
+                            <span>Node.js</span><span>AWS CDK</span><span>Docker</span><span>Terraform</span>
+                        </div>
+                        <a href="projects.html" class="showcase-card-link" data-nav>View Project &rarr;</a>
+                    </div>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-card-visual">
+                        <div class="visual-bg" style="background: linear-gradient(135deg, rgba(168,85,247,0.1), rgba(168,85,247,0.02));"></div>
+                        <div class="visual-overlay">
+                            <div class="visual-mock">
+                                <div class="visual-mock-bar"><span></span><span></span><span></span></div>
+                                <div class="visual-mock-content">
+                                    <div class="visual-mock-line" style="width:90%; background:var(--purple);"></div>
+                                    <div class="visual-mock-line" style="width:65%; background:var(--lime);"></div>
+                                    <div class="visual-mock-line" style="width:45%; background:var(--gray);"></div>
+                                    <div class="visual-mock-line" style="width:80%; background:var(--purple); margin-top:auto;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-card-body">
+                        <div class="showcase-card-type" style="color:var(--purple);">Data Visualization</div>
+                        <h3>InsightDash — Analytics Platform</h3>
+                        <p>Real-time analytics dashboard with WebSocket streaming, 12+ chart types, custom widgets, and exportable PDF reports for enterprise clients.</p>
+                        <div class="showcase-card-stack">
+                            <span>React</span><span>D3.js</span><span>FastAPI</span><span>ClickHouse</span>
+                        </div>
+                        <a href="projects.html" class="showcase-card-link" data-nav>View Project &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ TECH MARQUEE ═══════ -->
+        <section class="tech-marquee-section" id="tech-marquee">
+            <div class="tech-marquee-label">// Tech Stack</div>
+            <div class="marquee-track-wrapper">
+                <div class="marquee-track animate" id="marquee-1">
+                    <div class="marquee-item"><span class="mi-icon">☕</span><span class="mi-name">Java</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🍃</span><span class="mi-name">Spring Boot</span></div>
+                    <div class="marquee-item"><span class="mi-icon">⚛</span><span class="mi-name">React</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔷</span><span class="mi-name">TypeScript</span></div>
+                    <div class="marquee-item"><span class="mi-icon">▲</span><span class="mi-name">Next.js</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🟢</span><span class="mi-name">Node.js</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🐳</span><span class="mi-name">Docker</span></div>
+                    <div class="marquee-item"><span class="mi-icon">☸</span><span class="mi-name">Kubernetes</span></div>
+                    <div class="marquee-item"><span class="mi-icon">☁</span><span class="mi-name">AWS</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🐘</span><span class="mi-name">PostgreSQL</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔴</span><span class="mi-name">Redis</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🌀</span><span class="mi-name">Three.js</span></div>
+                    <!-- duplicated for seamless scroll -->
+                    <div class="marquee-item"><span class="mi-icon">☕</span><span class="mi-name">Java</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🍃</span><span class="mi-name">Spring Boot</span></div>
+                    <div class="marquee-item"><span class="mi-icon">⚛</span><span class="mi-name">React</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔷</span><span class="mi-name">TypeScript</span></div>
+                    <div class="marquee-item"><span class="mi-icon">▲</span><span class="mi-name">Next.js</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🟢</span><span class="mi-name">Node.js</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🐳</span><span class="mi-name">Docker</span></div>
+                    <div class="marquee-item"><span class="mi-icon">☸</span><span class="mi-name">Kubernetes</span></div>
+                    <div class="marquee-item"><span class="mi-icon">☁</span><span class="mi-name">AWS</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🐘</span><span class="mi-name">PostgreSQL</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔴</span><span class="mi-name">Redis</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🌀</span><span class="mi-name">Three.js</span></div>
+                </div>
+            </div>
+            <div class="marquee-track-wrapper">
+                <div class="marquee-track animate-reverse" id="marquee-2">
+                    <div class="marquee-item"><span class="mi-icon">🐍</span><span class="mi-name">Python</span></div>
+                    <div class="marquee-item"><span class="mi-icon">⚡</span><span class="mi-name">FastAPI</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🎨</span><span class="mi-name">Figma</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🌊</span><span class="mi-name">Tailwind</span></div>
+                    <div class="marquee-item"><span class="mi-icon">📦</span><span class="mi-name">Kafka</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔧</span><span class="mi-name">Terraform</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔄</span><span class="mi-name">CI/CD</span></div>
+                    <div class="marquee-item"><span class="mi-icon">📊</span><span class="mi-name">Grafana</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔐</span><span class="mi-name">OAuth2</span></div>
+                    <div class="marquee-item"><span class="mi-icon">💎</span><span class="mi-name">GLSL</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🗄</span><span class="mi-name">MongoDB</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🧪</span><span class="mi-name">Jest</span></div>
+                    <!-- duplicated for seamless scroll -->
+                    <div class="marquee-item"><span class="mi-icon">🐍</span><span class="mi-name">Python</span></div>
+                    <div class="marquee-item"><span class="mi-icon">⚡</span><span class="mi-name">FastAPI</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🎨</span><span class="mi-name">Figma</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🌊</span><span class="mi-name">Tailwind</span></div>
+                    <div class="marquee-item"><span class="mi-icon">📦</span><span class="mi-name">Kafka</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔧</span><span class="mi-name">Terraform</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔄</span><span class="mi-name">CI/CD</span></div>
+                    <div class="marquee-item"><span class="mi-icon">📊</span><span class="mi-name">Grafana</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🔐</span><span class="mi-name">OAuth2</span></div>
+                    <div class="marquee-item"><span class="mi-icon">💎</span><span class="mi-name">GLSL</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🗄</span><span class="mi-name">MongoDB</span></div>
+                    <div class="marquee-item"><span class="mi-icon">🧪</span><span class="mi-name">Jest</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ TESTIMONIALS ═══════ -->
+        <section class="testimonials" id="testimonials">
+            <div class="testimonials-header">
+                <div class="testimonials-label">// Client Voices</div>
+                <h2 class="testimonials-title">What People <span class="accent">Say</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-text">Alex completely transformed our platform. The backend went from crashing under 1k users to handling 50k concurrent sessions without breaking a sweat. Truly exceptional engineering.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">S</div>
+                        <div class="testimonial-author-info">
+                            <h4>Sarah Chen</h4>
+                            <span>CTO, DataStream Inc.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-text">We needed a developer who could handle both the creative and the technical. Alex delivered a 3D product configurator that increased our conversion rate by 34%. Blown away.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-author-info">
+                            <h4>Marcus Webb</h4>
+                            <span>VP Product, Elevate Studio</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-text">The attention to performance and UX detail was incredible. Our app went from a 42 Lighthouse score to 99. On time, under budget, and a genuinely fantastic collaborator.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">R</div>
+                        <div class="testimonial-author-info">
+                            <h4>Raj Patel</h4>
+                            <span>Founder, HealthTrack</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ PROCESS ═══════ -->
+        <section class="process" id="process">
+            <div class="process-header">
+                <div class="process-label">// How I Work</div>
+                <h2 class="process-title">From Concept to <span class="accent">Deployment</span></h2>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">01</div>
+                    <h3>Discovery</h3>
+                    <p>Deep-dive into your goals, constraints, and users. Research the problem space before writing a single line of code.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">02</div>
+                    <h3>Architect</h3>
+                    <p>Design the system blueprint — data models, API contracts, infrastructure topology, and component hierarchy.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">03</div>
+                    <h3>Build</h3>
+                    <p>Iterative development with tight feedback loops. CI/CD from day one. Every sprint ships something real and testable.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">04</div>
+                    <h3>Launch</h3>
+                    <p>Performance tuning, security audits, monitoring setup, and a smooth handoff with documentation that actually helps.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════ CTA BANNER ═══════ -->
+        <section class="cta-banner" id="cta-banner">
+            <h2 class="cta-banner-heading">Ready to Build Something <span class="accent">Extraordinary</span>?</h2>
+            <p class="cta-banner-sub">Whether it's a complex microservice platform, an interactive 3D experience, or a lightning-fast web app — let's turn your vision into reality.</p>
+            <div class="cta-banner-actions">
+                <a href="contact.html" class="btn btn-primary" data-nav data-magnetic>Start a Conversation</a>
+                <a href="projects.html" class="btn btn-ghost" data-nav data-magnetic>See All Projects</a>
+            </div>
+        </section>
+
+        <!-- GATEWAY -->
+        <section class="gateway" id="gateway">
+            <h2 class="gateway-heading">Explore the Nexus</h2>
+            <div class="gateway-grid">
+                <a href="about.html" class="gateway-card" data-nav>
+                    <div class="gateway-card-number">01</div>
+                    <h3 class="gateway-card-title">About Me</h3>
+                    <p class="gateway-card-desc">The person behind the code — my journey from curious tinkerer to full-stack architect.</p>
+                    <span class="gateway-card-link">Enter &rarr;</span>
+                </a>
+                <a href="skills.html" class="gateway-card" data-nav>
+                    <div class="gateway-card-number">02</div>
+                    <h3 class="gateway-card-title">Skills</h3>
+                    <p class="gateway-card-desc">Java, Spring Boot, React, TypeScript, Docker and the full arsenal at my command.</p>
+                    <span class="gateway-card-link">Enter &rarr;</span>
+                </a>
+                <a href="projects.html" class="gateway-card" data-nav>
+                    <div class="gateway-card-number">03</div>
+                    <h3 class="gateway-card-title">Projects</h3>
+                    <p class="gateway-card-desc">From microservice platforms to AI-powered UIs — real products, real impact.</p>
+                    <span class="gateway-card-link">Enter &rarr;</span>
+                </a>
+                <a href="experience.html" class="gateway-card" data-nav>
+                    <div class="gateway-card-number">04</div>
+                    <h3 class="gateway-card-title">Experience</h3>
+                    <p class="gateway-card-desc">Five years across startups and enterprises, building what matters.</p>
+                    <span class="gateway-card-link">Enter &rarr;</span>
+                </a>
+                <a href="contact.html" class="gateway-card" data-nav>
+                    <div class="gateway-card-number">05</div>
+                    <h3 class="gateway-card-title">Contact</h3>
+                    <p class="gateway-card-desc">Have a project? Let's build something extraordinary together.</p>
+                    <span class="gateway-card-link">Enter &rarr;</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="footer-bar">
+            <span>&copy; 2026 Alex Rivera. Built from scratch.</span>
+            <div class="footer-socials">
+                <a href="https://github.com/alexrivera" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://linkedin.com/in/alexrivera" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="mailto:alex@alexrivera.dev">Email</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════ GSAP ═══════ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- ═══════ THREE.JS (ES Module) ═══════ -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+        import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+        import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+        import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+
+        /* ═══════════════════════════════════════════════════════
+           SHADER: Simplex Noise (Ashima Arts)
+        ═══════════════════════════════════════════════════════ */
+        const noiseGLSL = `
+            vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
+            vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}
+            vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}
+            vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}
+            float snoise(vec3 v){
+                const vec2 C=vec2(1.0/6.0,1.0/3.0);
+                const vec4 D=vec4(0.0,0.5,1.0,2.0);
+                vec3 i=floor(v+dot(v,C.yyy));
+                vec3 x0=v-i+dot(i,C.xxx);
+                vec3 g=step(x0.yzx,x0.xyz);
+                vec3 l=1.0-g;
+                vec3 i1=min(g.xyz,l.zxy);
+                vec3 i2=max(g.xyz,l.zxy);
+                vec3 x1=x0-i1+C.xxx;
+                vec3 x2=x0-i2+C.yyy;
+                vec3 x3=x0-D.yyy;
+                i=mod289(i);
+                vec4 p=permute(permute(permute(
+                    i.z+vec4(0.0,i1.z,i2.z,1.0))
+                    +i.y+vec4(0.0,i1.y,i2.y,1.0))
+                    +i.x+vec4(0.0,i1.x,i2.x,1.0));
+                float n_=0.142857142857;
+                vec3 ns=n_*D.wyz-D.xzx;
+                vec4 j=p-49.0*floor(p*ns.z*ns.z);
+                vec4 x_=floor(j*ns.z);
+                vec4 y_=floor(j-7.0*x_);
+                vec4 x=x_*ns.x+ns.yyyy;
+                vec4 y=y_*ns.x+ns.yyyy;
+                vec4 h=1.0-abs(x)-abs(y);
+                vec4 b0=vec4(x.xy,y.xy);
+                vec4 b1=vec4(x.zw,y.zw);
+                vec4 s0=floor(b0)*2.0+1.0;
+                vec4 s1=floor(b1)*2.0+1.0;
+                vec4 sh=-step(h,vec4(0.0));
+                vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;
+                vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
+                vec3 p0=vec3(a0.xy,h.x);
+                vec3 p1=vec3(a0.zw,h.y);
+                vec3 p2=vec3(a1.xy,h.z);
+                vec3 p3=vec3(a1.zw,h.w);
+                vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));
+                p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
+                vec4 m=max(0.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.0);
+                m=m*m;
+                return 42.0*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
+            }
+        `;
+
+        /* ═══════════════════════════════════════════════════════
+           SHADER: Central Crystal – Vertex
+        ═══════════════════════════════════════════════════════ */
+        const crystalVertexShader = `
+            ${noiseGLSL}
+            uniform float uTime;
+            uniform float uDistortion;
+            uniform vec2 uMouse;
+            varying vec3 vNormal;
+            varying vec3 vPosition;
+            varying float vDisplacement;
+            varying vec3 vWorldPosition;
+
+            void main() {
+                vec3 pos = position;
+                float noise1 = snoise(pos * 0.4 + uTime * 0.25) * uDistortion;
+                float noise2 = snoise(pos * 1.2 + uTime * 0.15) * uDistortion * 0.3;
+                float totalNoise = noise1 + noise2;
+                pos += normal * totalNoise;
+
+                // Mouse influence
+                vec3 mouseWorld = vec3(uMouse.x * 15.0, uMouse.y * 15.0, 0.0);
+                float mouseDist = distance(pos, mouseWorld);
+                float mouseInfluence = smoothstep(20.0, 0.0, mouseDist) * 2.0;
+                pos += normal * mouseInfluence * 0.5;
+
+                vDisplacement = totalNoise;
+                vNormal = normalize(normalMatrix * normal);
+                vPosition = (modelViewMatrix * vec4(pos, 1.0)).xyz;
+                vWorldPosition = (modelMatrix * vec4(pos, 1.0)).xyz;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+            }
+        `;
+
+        /* ═══════════════════════════════════════════════════════
+           SHADER: Central Crystal – Fragment
+        ═══════════════════════════════════════════════════════ */
+        const crystalFragmentShader = `
+            uniform float uTime;
+            uniform vec3 uColor1;
+            uniform vec3 uColor2;
+            varying vec3 vNormal;
+            varying vec3 vPosition;
+            varying float vDisplacement;
+            varying vec3 vWorldPosition;
+
+            void main() {
+                vec3 viewDir = normalize(-vPosition);
+                float fresnel = pow(1.0 - max(dot(viewDir, vNormal), 0.0), 3.0);
+
+                // Iridescent color shift
+                float angle = dot(viewDir, vNormal);
+                vec3 col1 = uColor1;
+                vec3 col2 = uColor2;
+                vec3 col3 = vec3(0.0, 1.0, 0.53); // lime
+
+                vec3 baseColor = mix(col1, col2, fresnel);
+                baseColor = mix(baseColor, col3, sin(vDisplacement * 3.0 + uTime) * 0.3 + 0.3);
+
+                // Edge glow
+                float edgeGlow = fresnel * 0.8;
+
+                // Inner light
+                float innerLight = smoothstep(-0.5, 1.5, vDisplacement) * 0.25;
+
+                vec3 finalColor = baseColor * (0.3 + edgeGlow + innerLight);
+                float alpha = 0.45 + fresnel * 0.2;
+
+                gl_FragColor = vec4(finalColor, alpha);
+            }
+        `;
+
+        /* ═══════════════════════════════════════════════════════
+           SHADER: Wireframe Overlay – Vertex
+        ═══════════════════════════════════════════════════════ */
+        const wireVertexShader = `
+            ${noiseGLSL}
+            uniform float uTime;
+            uniform float uDistortion;
+            void main() {
+                vec3 pos = position;
+                float n = snoise(pos * 0.4 + uTime * 0.25) * uDistortion;
+                pos += normal * n;
+                pos *= 1.02;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+            }
+        `;
+
+        const wireFragmentShader = `
+            uniform float uTime;
+            void main() {
+                float pulse = sin(uTime * 2.0) * 0.3 + 0.5;
+                gl_FragColor = vec4(0.0, 0.94, 1.0, pulse * 0.25);
+            }
+        `;
+
+        /* ═══════════════════════════════════════════════════════
+           SHADER: Grid Floor
+        ═══════════════════════════════════════════════════════ */
+        const gridVertexShader = `
+            varying vec2 vUv;
+            varying vec3 vWorldPos;
+            void main() {
+                vUv = uv;
+                vWorldPos = (modelMatrix * vec4(position, 1.0)).xyz;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+        `;
+
+        const gridFragmentShader = `
+            varying vec2 vUv;
+            varying vec3 vWorldPos;
+            uniform float uTime;
+
+            void main() {
+                vec2 coord = vWorldPos.xz;
+                vec2 grid = abs(fract(coord * 0.1 - 0.5) - 0.5) / fwidth(coord * 0.1);
+                float line = min(grid.x, grid.y);
+                float gridIntensity = 1.0 - min(line, 1.0);
+
+                float dist = length(vWorldPos.xz) * 0.01;
+                float fade = 1.0 - smoothstep(0.0, 1.0, dist);
+
+                float pulse = sin(length(vWorldPos.xz) * 0.05 - uTime * 1.5) * 0.3 + 0.7;
+
+                vec3 color = vec3(0.0, 0.6, 0.8) * gridIntensity * fade * pulse;
+                float alpha = gridIntensity * fade * 0.35 * pulse;
+
+                gl_FragColor = vec4(color, alpha);
+            }
+        `;
+
+        /* ═══════════════════════════════════════════════════════
+           SHADER: Custom Post-Processing (Chromatic Aberration + Vignette + Scanlines)
+        ═══════════════════════════════════════════════════════ */
+        const compositeShader = {
+            uniforms: {
+                tDiffuse: { value: null },
+                uIntensity: { value: 0.003 },
+                uTime: { value: 0 },
+                uVignette: { value: 1.2 }
+            },
+            vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                    vUv = uv;
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform sampler2D tDiffuse;
+                uniform float uIntensity;
+                uniform float uTime;
+                uniform float uVignette;
+                varying vec2 vUv;
+
+                void main() {
+                    vec2 uv = vUv;
+                    vec2 dist = uv - 0.5;
+
+                    // Chromatic aberration
+                    float offset = length(dist) * uIntensity;
+                    float r = texture2D(tDiffuse, uv + dist * offset * 1.5).r;
+                    float g = texture2D(tDiffuse, uv).g;
+                    float b = texture2D(tDiffuse, uv - dist * offset * 1.5).b;
+
+                    // Vignette
+                    float vignette = 1.0 - dot(dist, dist) * uVignette;
+                    vignette = smoothstep(0.0, 1.0, vignette);
+
+                    // Subtle scanlines
+                    float scanline = sin(uv.y * 800.0 + uTime * 2.0) * 0.02 + 1.0;
+
+                    // Film grain
+                    float grain = (fract(sin(dot(uv * uTime, vec2(12.9898, 78.233))) * 43758.5453) - 0.5) * 0.03;
+
+                    vec3 color = vec3(r, g, b) * scanline * vignette + grain;
+                    gl_FragColor = vec4(color, 1.0);
+                }
+            `
+        };
+
+        /* ═══════════════════════════════════════════════════════
+           SCENE INITIALIZATION
+        ═══════════════════════════════════════════════════════ */
+        const isMobile = window.innerWidth < 768;
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        // Renderer
+        const canvas = document.getElementById('webgl-canvas');
+        const renderer = new THREE.WebGLRenderer({
+            canvas,
+            antialias: !isMobile,
+            alpha: false,
+            powerPreference: 'high-performance'
+        });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setClearColor(0x05060f, 1);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.2;
+
+        // Scene
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x05060f, 0.008);
+
+        // Camera
+        const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 500);
+        camera.position.set(0, 2, 35);
+
+        // Clock
+        const clock = new THREE.Clock();
+
+        // Mouse
+        const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+
+        /* ═══════════════════════════════════════════════════════
+           LIGHTING
+        ═══════════════════════════════════════════════════════ */
+        const ambientLight = new THREE.AmbientLight(0x111133, 0.5);
+        scene.add(ambientLight);
+
+        const cyanLight = new THREE.PointLight(0x00f0ff, 3, 80);
+        cyanLight.position.set(-20, 10, 20);
+        scene.add(cyanLight);
+
+        const magentaLight = new THREE.PointLight(0xff00ff, 2.5, 80);
+        magentaLight.position.set(20, -5, 15);
+        scene.add(magentaLight);
+
+        const limeLight = new THREE.PointLight(0x00ff88, 1.5, 60);
+        limeLight.position.set(0, 15, -10);
+        scene.add(limeLight);
+
+        const whiteLight = new THREE.PointLight(0xffffff, 1, 100);
+        whiteLight.position.set(0, 25, 30);
+        scene.add(whiteLight);
+
+        /* ═══════════════════════════════════════════════════════
+           CENTRAL CRYSTAL
+        ═══════════════════════════════════════════════════════ */
+        const crystalGeo = new THREE.IcosahedronGeometry(8, isMobile ? 3 : 5);
+        const crystalMat = new THREE.ShaderMaterial({
+            vertexShader: crystalVertexShader,
+            fragmentShader: crystalFragmentShader,
+            uniforms: {
+                uTime: { value: 0 },
+                uDistortion: { value: 2.5 },
+                uMouse: { value: new THREE.Vector2(0, 0) },
+                uColor1: { value: new THREE.Color(0x00f0ff) },
+                uColor2: { value: new THREE.Color(0xff00ff) }
+            },
+            transparent: true,
+            side: THREE.DoubleSide,
+            depthWrite: false
+        });
+        const crystal = new THREE.Mesh(crystalGeo, crystalMat);
+        crystal.position.set(12, 0, 0);
+        scene.add(crystal);
+
+        // Wireframe overlay
+        const wireGeo = new THREE.IcosahedronGeometry(8, isMobile ? 3 : 5);
+        const wireMat = new THREE.ShaderMaterial({
+            vertexShader: wireVertexShader,
+            fragmentShader: wireFragmentShader,
+            uniforms: {
+                uTime: { value: 0 },
+                uDistortion: { value: 2.5 }
+            },
+            transparent: true,
+            wireframe: true,
+            depthWrite: false
+        });
+        const wireframe = new THREE.Mesh(wireGeo, wireMat);
+        wireframe.position.copy(crystal.position);
+        scene.add(wireframe);
+
+        // Inner glow sphere
+        const innerGlowMat = new THREE.MeshBasicMaterial({
+            color: 0x00f0ff,
+            transparent: true,
+            opacity: 0.04
+        });
+        const innerGlow = new THREE.Mesh(new THREE.SphereGeometry(5, 16, 16), innerGlowMat);
+        innerGlow.position.copy(crystal.position);
+        scene.add(innerGlow);
+
+        /* ═══════════════════════════════════════════════════════
+           SATELLITE OBJECTS
+        ═══════════════════════════════════════════════════════ */
+        const satellites = [];
+        const satGeos = [
+            new THREE.OctahedronGeometry(1, 0),
+            new THREE.TetrahedronGeometry(1, 0),
+            new THREE.DodecahedronGeometry(0.8, 0),
+            new THREE.IcosahedronGeometry(0.7, 0),
+            new THREE.BoxGeometry(1, 1, 1),
+            new THREE.ConeGeometry(0.7, 1.4, 4),
+            new THREE.TorusGeometry(0.6, 0.25, 8, 6),
+            new THREE.OctahedronGeometry(0.5, 1)
+        ];
+
+        const satColors = [0x00f0ff, 0xff00ff, 0x00ff88, 0xa855f7, 0x00f0ff, 0xff00ff, 0x00ff88, 0xa855f7];
+
+        for (let i = 0; i < 8; i++) {
+            const geo = satGeos[i];
+            const mat = new THREE.MeshStandardMaterial({
+                color: satColors[i],
+                emissive: satColors[i],
+                emissiveIntensity: 0.4,
+                metalness: 0.9,
+                roughness: 0.15,
+                wireframe: i % 3 === 0
+            });
+            const mesh = new THREE.Mesh(geo, mat);
+
+            const orbitRadius = 14 + Math.random() * 10;
+            const orbitSpeed = 0.1 + Math.random() * 0.25;
+            const orbitTilt = (Math.random() - 0.5) * Math.PI * 0.6;
+            const orbitPhase = Math.random() * Math.PI * 2;
+            const yOffset = (Math.random() - 0.5) * 8;
+
+            mesh.userData = { orbitRadius, orbitSpeed, orbitTilt, orbitPhase, yOffset };
+            scene.add(mesh);
+            satellites.push(mesh);
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           CONNECTIONS (lines between nearby objects)
+        ═══════════════════════════════════════════════════════ */
+        const connectionMat = new THREE.LineBasicMaterial({
+            color: 0x00f0ff,
+            transparent: true,
+            opacity: 0.08,
+            depthWrite: false
+        });
+        const maxConnections = 30;
+        const connectionLines = [];
+        for (let i = 0; i < maxConnections; i++) {
+            const geo = new THREE.BufferGeometry().setFromPoints([
+                new THREE.Vector3(), new THREE.Vector3()
+            ]);
+            const line = new THREE.Line(geo, connectionMat.clone());
+            line.visible = false;
+            scene.add(line);
+            connectionLines.push(line);
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           PARTICLE FIELD (Background Stars)
+        ═══════════════════════════════════════════════════════ */
+        const particleCount = isMobile ? 800 : 2500;
+        const pGeo = new THREE.BufferGeometry();
+        const pPositions = new Float32Array(particleCount * 3);
+        const pSizes = new Float32Array(particleCount);
+        const pColors = new Float32Array(particleCount * 3);
+
+        for (let i = 0; i < particleCount; i++) {
+            const i3 = i * 3;
+            const radius = 20 + Math.random() * 180;
+            const theta = Math.random() * Math.PI * 2;
+            const phi = Math.acos(2 * Math.random() - 1);
+
+            pPositions[i3] = radius * Math.sin(phi) * Math.cos(theta);
+            pPositions[i3 + 1] = radius * Math.sin(phi) * Math.sin(theta);
+            pPositions[i3 + 2] = radius * Math.cos(phi);
+
+            pSizes[i] = Math.random() * 2 + 0.5;
+
+            // Varied colors: cyan, magenta, white
+            const colorChoice = Math.random();
+            if (colorChoice < 0.4) {
+                pColors[i3] = 0; pColors[i3 + 1] = 0.94; pColors[i3 + 2] = 1;
+            } else if (colorChoice < 0.7) {
+                pColors[i3] = 1; pColors[i3 + 1] = 0; pColors[i3 + 2] = 1;
+            } else {
+                pColors[i3] = 0.9; pColors[i3 + 1] = 0.9; pColors[i3 + 2] = 0.95;
+            }
+        }
+
+        pGeo.setAttribute('position', new THREE.BufferAttribute(pPositions, 3));
+        pGeo.setAttribute('size', new THREE.BufferAttribute(pSizes, 1));
+        pGeo.setAttribute('color', new THREE.BufferAttribute(pColors, 3));
+
+        const pMat = new THREE.ShaderMaterial({
+            uniforms: {
+                uTime: { value: 0 },
+                uPixelRatio: { value: renderer.getPixelRatio() }
+            },
+            vertexShader: `
+                attribute float size;
+                attribute vec3 color;
+                varying vec3 vColor;
+                uniform float uTime;
+                uniform float uPixelRatio;
+                void main() {
+                    vColor = color;
+                    vec3 pos = position;
+                    pos.x += sin(uTime * 0.1 + position.z * 0.01) * 0.5;
+                    pos.y += cos(uTime * 0.08 + position.x * 0.01) * 0.5;
+                    vec4 mvPos = modelViewMatrix * vec4(pos, 1.0);
+                    gl_PointSize = size * uPixelRatio * (80.0 / -mvPos.z);
+                    gl_Position = projectionMatrix * mvPos;
+                }
+            `,
+            fragmentShader: `
+                varying vec3 vColor;
+                void main() {
+                    float d = length(gl_PointCoord - 0.5);
+                    if (d > 0.5) discard;
+                    float alpha = smoothstep(0.5, 0.0, d);
+                    gl_FragColor = vec4(vColor, alpha * 0.7);
+                }
+            `,
+            transparent: true,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
+        });
+
+        const particles = new THREE.Points(pGeo, pMat);
+        scene.add(particles);
+
+        /* ═══════════════════════════════════════════════════════
+           GRID FLOOR
+        ═══════════════════════════════════════════════════════ */
+        const gridPlane = new THREE.Mesh(
+            new THREE.PlaneGeometry(400, 400),
+            new THREE.ShaderMaterial({
+                vertexShader: gridVertexShader,
+                fragmentShader: gridFragmentShader,
+                uniforms: { uTime: { value: 0 } },
+                transparent: true,
+                side: THREE.DoubleSide,
+                depthWrite: false
+            })
+        );
+        gridPlane.rotation.x = -Math.PI / 2;
+        gridPlane.position.y = -15;
+        scene.add(gridPlane);
+
+        /* ═══════════════════════════════════════════════════════
+           FLOATING RINGS (decorative)
+        ═══════════════════════════════════════════════════════ */
+        const rings = [];
+        for (let i = 0; i < 3; i++) {
+            const ringGeo = new THREE.TorusGeometry(18 + i * 6, 0.05, 8, 80);
+            const ringMat = new THREE.MeshBasicMaterial({
+                color: i === 0 ? 0x00f0ff : i === 1 ? 0xff00ff : 0x00ff88,
+                transparent: true,
+                opacity: 0.12
+            });
+            const ring = new THREE.Mesh(ringGeo, ringMat);
+            ring.position.copy(crystal.position);
+            ring.rotation.x = Math.PI / 2 + i * 0.4;
+            ring.rotation.y = i * 0.6;
+            scene.add(ring);
+            rings.push(ring);
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           POST-PROCESSING
+        ═══════════════════════════════════════════════════════ */
+        const composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+
+        if (!isMobile) {
+            const bloomPass = new UnrealBloomPass(
+                new THREE.Vector2(window.innerWidth, window.innerHeight),
+                0.45,   // strength (reduced from 1.2)
+                0.4,   // radius
+                0.55   // threshold (raised from 0.25)
+            );
+            composer.addPass(bloomPass);
+        }
+
+        const compositePass = new ShaderPass(compositeShader);
+        composer.addPass(compositePass);
+
+        /* ═══════════════════════════════════════════════════════
+           SCROLL STATE
+        ═══════════════════════════════════════════════════════ */
+        let scrollProgress = 0;
+        const cameraPositions = {
+            start: { x: 0, y: 2, z: 35, lookX: 12, lookY: 0, lookZ: 0 },
+            mid1: { x: -5, y: 8, z: 28, lookX: 0, lookY: 2, lookZ: -5 },
+            mid2: { x: 5, y: 3, z: 22, lookX: 0, lookY: 0, lookZ: 0 },
+            end: { x: 0, y: 15, z: 45, lookX: 0, lookY: 0, lookZ: 0 }
+        };
+
+        function updateScroll() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress = scrollHeight > 0 ? window.scrollY / scrollHeight : 0;
+        }
+
+        window.addEventListener('scroll', updateScroll, { passive: true });
+
+        function lerpCameraFromScroll(time) {
+            const t = scrollProgress;
+            const p = cameraPositions;
+
+            let cx, cy, cz, lx, ly, lz;
+            if (t < 0.33) {
+                const s = t / 0.33;
+                cx = THREE.MathUtils.lerp(p.start.x, p.mid1.x, s);
+                cy = THREE.MathUtils.lerp(p.start.y, p.mid1.y, s);
+                cz = THREE.MathUtils.lerp(p.start.z, p.mid1.z, s);
+                lx = THREE.MathUtils.lerp(p.start.lookX, p.mid1.lookX, s);
+                ly = THREE.MathUtils.lerp(p.start.lookY, p.mid1.lookY, s);
+                lz = THREE.MathUtils.lerp(p.start.lookZ, p.mid1.lookZ, s);
+            } else if (t < 0.66) {
+                const s = (t - 0.33) / 0.33;
+                cx = THREE.MathUtils.lerp(p.mid1.x, p.mid2.x, s);
+                cy = THREE.MathUtils.lerp(p.mid1.y, p.mid2.y, s);
+                cz = THREE.MathUtils.lerp(p.mid1.z, p.mid2.z, s);
+                lx = THREE.MathUtils.lerp(p.mid1.lookX, p.mid2.lookX, s);
+                ly = THREE.MathUtils.lerp(p.mid1.lookY, p.mid2.lookY, s);
+                lz = THREE.MathUtils.lerp(p.mid1.lookZ, p.mid2.lookZ, s);
+            } else {
+                const s = (t - 0.66) / 0.34;
+                cx = THREE.MathUtils.lerp(p.mid2.x, p.end.x, s);
+                cy = THREE.MathUtils.lerp(p.mid2.y, p.end.y, s);
+                cz = THREE.MathUtils.lerp(p.mid2.z, p.end.z, s);
+                lx = THREE.MathUtils.lerp(p.mid2.lookX, p.end.lookX, s);
+                ly = THREE.MathUtils.lerp(p.mid2.lookY, p.end.lookY, s);
+                lz = THREE.MathUtils.lerp(p.mid2.lookZ, p.end.lookZ, s);
+            }
+
+            // Add mouse parallax
+            cx += mouse.x * 3;
+            cy += mouse.y * 2;
+
+            camera.position.lerp(new THREE.Vector3(cx, cy, cz), 0.05);
+            const lookTarget = new THREE.Vector3(lx, ly, lz);
+            camera.lookAt(lookTarget);
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           ANIMATION LOOP
+        ═══════════════════════════════════════════════════════ */
+        function animate() {
+            requestAnimationFrame(animate);
+            const elapsed = clock.getElapsedTime();
+            const delta = clock.getDelta();
+
+            // Smooth mouse
+            mouse.x += (mouse.targetX - mouse.x) * 0.05;
+            mouse.y += (mouse.targetY - mouse.y) * 0.05;
+
+            // Update crystal
+            crystalMat.uniforms.uTime.value = elapsed;
+            crystalMat.uniforms.uMouse.value.set(mouse.x, mouse.y);
+
+            const breathe = Math.sin(elapsed * 0.5) * 0.3 + 1.0;
+            crystalMat.uniforms.uDistortion.value = 2.0 + breathe * 0.5;
+
+            crystal.rotation.y = elapsed * 0.08;
+            crystal.rotation.x = Math.sin(elapsed * 0.15) * 0.15;
+
+            // Wireframe
+            wireMat.uniforms.uTime.value = elapsed;
+            wireMat.uniforms.uDistortion.value = crystalMat.uniforms.uDistortion.value;
+            wireframe.rotation.copy(crystal.rotation);
+
+            // Inner glow pulse
+            innerGlow.scale.setScalar(0.95 + Math.sin(elapsed * 1.5) * 0.08);
+            innerGlowMat.opacity = 0.03 + Math.sin(elapsed * 2) * 0.02;
+
+            // Satellites orbit
+            satellites.forEach((sat, i) => {
+                const u = sat.userData;
+                const angle = elapsed * u.orbitSpeed + u.orbitPhase;
+                const cx = crystal.position.x;
+                sat.position.x = cx + Math.cos(angle) * u.orbitRadius;
+                sat.position.z = Math.sin(angle) * u.orbitRadius * Math.cos(u.orbitTilt);
+                sat.position.y = u.yOffset + Math.sin(angle) * u.orbitRadius * Math.sin(u.orbitTilt);
+                sat.rotation.x = elapsed * (0.3 + i * 0.1);
+                sat.rotation.y = elapsed * (0.2 + i * 0.15);
+            });
+
+            // Update connections
+            let connIdx = 0;
+            const allObjects = [crystal, ...satellites];
+            for (let i = 0; i < allObjects.length && connIdx < maxConnections; i++) {
+                for (let j = i + 1; j < allObjects.length && connIdx < maxConnections; j++) {
+                    const dist = allObjects[i].position.distanceTo(allObjects[j].position);
+                    if (dist < 25) {
+                        const line = connectionLines[connIdx];
+                        const positions = line.geometry.attributes.position;
+                        positions.setXYZ(0, allObjects[i].position.x, allObjects[i].position.y, allObjects[i].position.z);
+                        positions.setXYZ(1, allObjects[j].position.x, allObjects[j].position.y, allObjects[j].position.z);
+                        positions.needsUpdate = true;
+                        line.material.opacity = THREE.MathUtils.mapLinear(dist, 5, 25, 0.15, 0.0);
+                        line.visible = true;
+                        connIdx++;
+                    }
+                }
+            }
+            for (let k = connIdx; k < maxConnections; k++) {
+                connectionLines[k].visible = false;
+            }
+
+            // Rings rotate
+            rings.forEach((ring, i) => {
+                ring.rotation.z = elapsed * (0.05 + i * 0.02);
+                ring.rotation.x = Math.PI / 2 + i * 0.4 + Math.sin(elapsed * 0.2) * 0.1;
+            });
+
+            // Lights orbit
+            cyanLight.position.x = Math.cos(elapsed * 0.3) * 25;
+            cyanLight.position.z = Math.sin(elapsed * 0.3) * 25;
+            magentaLight.position.x = Math.cos(elapsed * 0.2 + 2) * 20;
+            magentaLight.position.z = Math.sin(elapsed * 0.2 + 2) * 20;
+
+            // Particles
+            pMat.uniforms.uTime.value = elapsed;
+            particles.rotation.y = elapsed * 0.01;
+
+            // Grid
+            gridPlane.material.uniforms.uTime.value = elapsed;
+
+            // Camera scroll
+            lerpCameraFromScroll(elapsed);
+
+            // Post-processing
+            compositePass.uniforms.uTime.value = elapsed;
+
+            // Render
+            composer.render();
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           MOUSE TRACKING
+        ═══════════════════════════════════════════════════════ */
+        window.addEventListener('mousemove', (e) => {
+            mouse.targetX = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.targetY = -(e.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        // Touch support
+        window.addEventListener('touchmove', (e) => {
+            if (e.touches.length > 0) {
+                mouse.targetX = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+                mouse.targetY = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+            }
+        }, { passive: true });
+
+        /* ═══════════════════════════════════════════════════════
+           RESIZE
+        ═══════════════════════════════════════════════════════ */
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            composer.setSize(window.innerWidth, window.innerHeight);
+            pMat.uniforms.uPixelRatio.value = renderer.getPixelRatio();
+        });
+
+        /* ═══════════════════════════════════════════════════════
+           PRELOADER
+        ═══════════════════════════════════════════════════════ */
+        const loaderBar = document.getElementById('loader-progress');
+        let loadProgress = 0;
+        const loaderInterval = setInterval(() => {
+            loadProgress += Math.random() * 15 + 5;
+            if (loadProgress >= 100) {
+                loadProgress = 100;
+                loaderBar.style.width = '100%';
+                clearInterval(loaderInterval);
+                setTimeout(() => {
+                    gsap.to('#preloader', {
+                        opacity: 0,
+                        duration: 0.8,
+                        ease: 'power2.inOut',
+                        onComplete: () => {
+                            document.getElementById('preloader').style.display = 'none';
+                            runEntryAnimations();
+                        }
+                    });
+                }, 400);
+            } else {
+                loaderBar.style.width = loadProgress + '%';
+            }
+        }, 100);
+
+        /* ═══════════════════════════════════════════════════════
+           DOM ENTRY ANIMATIONS (GSAP)
+        ═══════════════════════════════════════════════════════ */
+        function runEntryAnimations() {
+            const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+            tl.to('.hero-name .line-inner', {
+                y: '0%',
+                duration: 1.2,
+                stagger: 0.15
+            })
+            .to('.hero-label', {
+                opacity: 1,
+                x: 0,
+                duration: 0.8
+            }, '-=0.6')
+            .to('.hero-tagline', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8
+            }, '-=0.4')
+            .to('.hero-cta-group', {
+                opacity: 1,
+                y: 0,
+                duration: 0.8
+            }, '-=0.3')
+            .to('#scroll-indicator', {
+                opacity: 0.6,
+                duration: 0.8
+            }, '-=0.2');
+        }
+
+        /* ═══════════════════════════════════════════════════════
+           SCROLL ANIMATIONS (GSAP ScrollTrigger)
+        ═══════════════════════════════════════════════════════ */
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Fade hero on scroll
+        gsap.to('.hero', {
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: 'bottom top',
+                scrub: true
+            },
+            opacity: 0,
+            y: -80,
+            scale: 0.95
+        });
+
+        // Manifesto label
+        gsap.to('.manifesto-label', {
+            scrollTrigger: {
+                trigger: '.manifesto',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 1,
+            duration: 0.8
+        });
+
+        // Manifesto text word reveal
+        const manifestoEl = document.getElementById('manifesto-text');
+        const manifestoText = manifestoEl.textContent.trim();
+        const highlightWords = ['architect', 'experiences', 'alive', 'intentional', 'statement', 'beautifully'];
+        manifestoEl.innerHTML = manifestoText.split(' ').map(word => {
+            const isHighlight = highlightWords.some(hw => word.toLowerCase().includes(hw));
+            return `<span class="word${isHighlight ? ' highlight' : ''}">${word}</span>`;
+        }).join(' ');
+
+        const words = manifestoEl.querySelectorAll('.word');
+        words.forEach((word, i) => {
+            gsap.to(word, {
+                scrollTrigger: {
+                    trigger: '.manifesto',
+                    start: `top ${80 - (i / words.length) * 60}%`,
+                    end: `top ${70 - (i / words.length) * 60}%`,
+                    scrub: true
+                },
+                color: word.classList.contains('highlight') ? '#00f0ff' : '#eaeaea'
+            });
+        });
+
+        // Stats cards
+        document.querySelectorAll('.stat-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 85%',
+                    toggleActions: 'play none none reverse',
+                    onEnter: () => {
+                        card.classList.add('visible');
+                        const numEl = card.querySelector('.stat-number');
+                        const target = parseInt(numEl.dataset.count, 10);
+                        gsap.fromTo({val:0}, {val:0}, {val:target, duration:2, ease:'power2.out', onUpdate(){numEl.textContent=Math.round(this.targets()[0].val)+'+'}});
+                    },
+                    onLeaveBack: () => {
+                        card.classList.remove('visible');
+                        const numEl = card.querySelector('.stat-number');
+                        numEl.textContent = '0';
+                    },
+                    onEnterBack: () => {
+                        card.classList.add('visible');
+                        const numEl = card.querySelector('.stat-number');
+                        const target = parseInt(numEl.dataset.count, 10);
+                        gsap.fromTo({val:0}, {val:0}, {val:target, duration:2, ease:'power2.out', onUpdate(){numEl.textContent=Math.round(this.targets()[0].val)+'+'}});
+                    }
+                },
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                delay: i * 0.1
+            });
+        });
+
+        // ═══ SERVICES SECTION ═══
+        gsap.to('.services-label', {
+            scrollTrigger: { trigger: '.services', start: 'top 80%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8
+        });
+        gsap.to('.services-title', {
+            scrollTrigger: { trigger: '.services', start: 'top 78%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8, delay: 0.1
+        });
+        gsap.to('.services-sub', {
+            scrollTrigger: { trigger: '.services', start: 'top 75%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8, delay: 0.2
+        });
+        document.querySelectorAll('.service-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: { trigger: card, start: 'top 90%', toggleActions: 'play none none reverse' },
+                opacity: 1, y: 0, duration: 0.7, delay: i * 0.08
+            });
+        });
+
+        // ═══ SHOWCASE SECTION ═══
+        gsap.to('.showcase-label', {
+            scrollTrigger: { trigger: '.showcase', start: 'top 80%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8
+        });
+        gsap.to('.showcase-title', {
+            scrollTrigger: { trigger: '.showcase', start: 'top 78%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8, delay: 0.1
+        });
+        document.querySelectorAll('.showcase-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: { trigger: card, start: 'top 90%', toggleActions: 'play none none reverse' },
+                opacity: 1, y: 0, duration: 0.8, delay: i * 0.1
+            });
+        });
+
+        // ═══ TECH MARQUEE ═══
+        gsap.to('.tech-marquee-label', {
+            scrollTrigger: { trigger: '.tech-marquee-section', start: 'top 85%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8
+        });
+
+        // ═══ TESTIMONIALS SECTION ═══
+        gsap.to('.testimonials-label', {
+            scrollTrigger: { trigger: '.testimonials', start: 'top 80%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8
+        });
+        gsap.to('.testimonials-title', {
+            scrollTrigger: { trigger: '.testimonials', start: 'top 78%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8, delay: 0.1
+        });
+        document.querySelectorAll('.testimonial-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: { trigger: card, start: 'top 90%', toggleActions: 'play none none reverse' },
+                opacity: 1, y: 0, duration: 0.7, delay: i * 0.1
+            });
+        });
+
+        // ═══ PROCESS SECTION ═══
+        gsap.to('.process-label', {
+            scrollTrigger: { trigger: '.process', start: 'top 80%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8
+        });
+        gsap.to('.process-title', {
+            scrollTrigger: { trigger: '.process', start: 'top 78%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8, delay: 0.1
+        });
+        document.querySelectorAll('.process-step').forEach((step, i) => {
+            gsap.to(step, {
+                scrollTrigger: { trigger: step, start: 'top 90%', toggleActions: 'play none none reverse' },
+                opacity: 1, y: 0, duration: 0.7, delay: i * 0.12
+            });
+        });
+
+        // ═══ CTA BANNER ═══
+        gsap.to('.cta-banner-heading', {
+            scrollTrigger: { trigger: '.cta-banner', start: 'top 80%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8
+        });
+        gsap.to('.cta-banner-sub', {
+            scrollTrigger: { trigger: '.cta-banner', start: 'top 75%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8, delay: 0.15
+        });
+        gsap.to('.cta-banner-actions', {
+            scrollTrigger: { trigger: '.cta-banner', start: 'top 70%', toggleActions: 'play none none reverse' },
+            opacity: 1, y: 0, duration: 0.8, delay: 0.25
+        });
+
+        // Gateway heading
+        gsap.to('.gateway-heading', {
+            scrollTrigger: {
+                trigger: '.gateway',
+                start: 'top 80%',
+                toggleActions: 'play none none reverse'
+            },
+            opacity: 1,
+            duration: 0.8
+        });
+
+        // Gateway cards stagger
+        document.querySelectorAll('.gateway-card').forEach((card, i) => {
+            gsap.to(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 90%',
+                    toggleActions: 'play none none reverse'
+                },
+                opacity: 1,
+                y: 0,
+                duration: 0.7,
+                delay: i * 0.08
+            });
+        });
+
+        // Hide scroll indicator on scroll
+        gsap.to('#scroll-indicator', {
+            scrollTrigger: {
+                trigger: '.hero',
+                start: 'top top',
+                end: '+=100',
+                scrub: true
+            },
+            opacity: 0
+        });
+
+        /* ═══════════════════════════════════════════════════════
+           START RENDERING
+        ═══════════════════════════════════════════════════════ */
+        animate();
+
+    </script>
+
+    <!-- ═══════ DOM INTERACTIONS (non-module) ═══════ -->
+
+    <script src="js/shared.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

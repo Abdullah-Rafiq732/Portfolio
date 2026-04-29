@@ -1,0 +1,1196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skills — Alex Rivera | Nexus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/skills.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scroll-progress"></div>
+    <div id="preloader">
+      <div class="loader-ring"></div>
+      <div class="loader-txt">Scanning Network</div>
+      <div class="loader-bar"><span id="loader-progress"></span></div>
+    </div>
+    <div class="page-transition" id="page-transition"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+
+    <nav id="navbar">
+      <a href="index.html" class="nav-logo" data-nav
+        ><div class="logo-icon"></div>
+        NEXUS</a
+      >
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span><span></span><span></span>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" data-nav>Home</a></li>
+        <li><a href="about.html" data-nav>About</a></li>
+        <li><a href="skills.html" class="active" data-nav>Skills</a></li>
+        <li><a href="projects.html" data-nav>Projects</a></li>
+        <li><a href="experience.html" data-nav>Experience</a></li>
+        <li><a href="contact.html" data-nav>Contact</a></li>
+      </ul>
+    </nav>
+
+    <canvas id="webgl"></canvas>
+
+    <div class="content">
+      <!-- ═══ HERO ═══ -->
+      <section class="skill-hero">
+        <div class="skill-hero-inner">
+          <div class="section-label">// Skill Matrix</div>
+          <h1>
+            <span class="line"
+              ><span class="line-inner">My Technical</span></span
+            >
+            <span class="line"
+              ><span class="line-inner"
+                ><span class="accent">Arsenal.</span></span
+              ></span
+            >
+          </h1>
+          <p class="hero-sub">
+            Five years of relentless learning distilled into a toolkit that
+            spans the full stack — from designing resilient microservices to
+            crafting pixel-perfect interfaces.
+          </p>
+        </div>
+      </section>
+
+      <!-- ═══ FRONTEND ═══ -->
+      <section class="skills-section" id="frontend">
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon">⟨/⟩</div>
+            <div class="cat-label">
+              Frontend <span class="accent">Mastery</span>
+            </div>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card c-cyan">
+              <div class="skill-name">
+                <span class="dot cyan"></span>React / Next.js
+              </div>
+              <div class="skill-level">Expert — 4 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-cyan" data-width="95"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Hooks</span
+                ><span class="skill-tag">RSC</span
+                ><span class="skill-tag">App Router</span
+                ><span class="skill-tag">SSR/ISR</span>
+              </div>
+            </div>
+            <div class="skill-card c-cyan">
+              <div class="skill-name">
+                <span class="dot cyan"></span>TypeScript
+              </div>
+              <div class="skill-level">Expert — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-cyan" data-width="92"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Generics</span
+                ><span class="skill-tag">Zod</span
+                ><span class="skill-tag">Strict Mode</span>
+              </div>
+            </div>
+            <div class="skill-card c-cyan">
+              <div class="skill-name">
+                <span class="dot cyan"></span>Three.js / WebGL
+              </div>
+              <div class="skill-level">Advanced — 2 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-cyan" data-width="80"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">GLSL</span
+                ><span class="skill-tag">R3F</span
+                ><span class="skill-tag">Post-FX</span>
+              </div>
+            </div>
+            <div class="skill-card c-cyan">
+              <div class="skill-name">
+                <span class="dot cyan"></span>CSS / Tailwind
+              </div>
+              <div class="skill-level">Expert — 5 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-cyan" data-width="96"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Grid</span
+                ><span class="skill-tag">Animations</span
+                ><span class="skill-tag">Responsive</span>
+              </div>
+            </div>
+            <div class="skill-card c-cyan">
+              <div class="skill-name">
+                <span class="dot cyan"></span>GSAP / Framer Motion
+              </div>
+              <div class="skill-level">Advanced — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-cyan" data-width="88"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">ScrollTrigger</span
+                ><span class="skill-tag">SVG Morph</span
+                ><span class="skill-tag">Physics</span>
+              </div>
+            </div>
+            <div class="skill-card c-cyan">
+              <div class="skill-name">
+                <span class="dot cyan"></span>Testing
+              </div>
+              <div class="skill-level">Advanced — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-cyan" data-width="85"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Jest</span
+                ><span class="skill-tag">Cypress</span
+                ><span class="skill-tag">Playwright</span
+                ><span class="skill-tag">RTL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ BACKEND ═══ -->
+      <section class="skills-section" id="backend">
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon magenta">{ }</div>
+            <div class="cat-label">
+              Backend <span class="accent-m">Architecture</span>
+            </div>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card c-magenta">
+              <div class="skill-name">
+                <span class="dot magenta"></span>Java / Spring Boot
+              </div>
+              <div class="skill-level">Expert — 5 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-magenta" data-width="95"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">WebFlux</span
+                ><span class="skill-tag">Security</span
+                ><span class="skill-tag">JPA</span
+                ><span class="skill-tag">Microservices</span>
+              </div>
+            </div>
+            <div class="skill-card c-magenta">
+              <div class="skill-name">
+                <span class="dot magenta"></span>Node.js / Express
+              </div>
+              <div class="skill-level">Expert — 4 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-magenta" data-width="90"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">REST</span
+                ><span class="skill-tag">GraphQL</span
+                ><span class="skill-tag">WebSockets</span>
+              </div>
+            </div>
+            <div class="skill-card c-magenta">
+              <div class="skill-name">
+                <span class="dot magenta"></span>PostgreSQL / MongoDB
+              </div>
+              <div class="skill-level">Advanced — 4 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-magenta" data-width="88"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Query Opt.</span
+                ><span class="skill-tag">Indexing</span
+                ><span class="skill-tag">Aggregation</span>
+              </div>
+            </div>
+            <div class="skill-card c-magenta">
+              <div class="skill-name">
+                <span class="dot magenta"></span>Python / FastAPI
+              </div>
+              <div class="skill-level">Intermediate — 2 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-magenta" data-width="72"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Async</span
+                ><span class="skill-tag">Pydantic</span
+                ><span class="skill-tag">ML Pipelines</span>
+              </div>
+            </div>
+            <div class="skill-card c-magenta">
+              <div class="skill-name">
+                <span class="dot magenta"></span>Redis / Kafka
+              </div>
+              <div class="skill-level">Advanced — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-magenta" data-width="82"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Pub/Sub</span
+                ><span class="skill-tag">Streams</span
+                ><span class="skill-tag">Event-Driven</span>
+              </div>
+            </div>
+            <div class="skill-card c-magenta">
+              <div class="skill-name">
+                <span class="dot magenta"></span>Auth & Security
+              </div>
+              <div class="skill-level">Advanced — 4 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-magenta" data-width="86"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">OAuth2</span
+                ><span class="skill-tag">JWT</span
+                ><span class="skill-tag">RBAC</span
+                ><span class="skill-tag">OWASP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ DEVOPS / TOOLS ═══ -->
+      <section class="skills-section" id="devops">
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon lime">⚙</div>
+            <div class="cat-label">
+              DevOps & <span class="accent-l">Tooling</span>
+            </div>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card c-lime">
+              <div class="skill-name">
+                <span class="dot lime"></span>Docker / K8s
+              </div>
+              <div class="skill-level">Advanced — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-lime" data-width="85"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Compose</span
+                ><span class="skill-tag">Helm</span
+                ><span class="skill-tag">Pods</span>
+              </div>
+            </div>
+            <div class="skill-card c-lime">
+              <div class="skill-name">
+                <span class="dot lime"></span>AWS / Cloud
+              </div>
+              <div class="skill-level">Advanced — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-lime" data-width="83"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">EC2</span
+                ><span class="skill-tag">Lambda</span
+                ><span class="skill-tag">S3</span
+                ><span class="skill-tag">CDK</span>
+              </div>
+            </div>
+            <div class="skill-card c-lime">
+              <div class="skill-name">
+                <span class="dot lime"></span>CI / CD
+              </div>
+              <div class="skill-level">Advanced — 4 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-lime" data-width="88"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">GitHub Actions</span
+                ><span class="skill-tag">Jenkins</span
+                ><span class="skill-tag">ArgoCD</span>
+              </div>
+            </div>
+            <div class="skill-card c-lime">
+              <div class="skill-name">
+                <span class="dot lime"></span>Git / Version Control
+              </div>
+              <div class="skill-level">Expert — 5 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-lime" data-width="94"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Rebase</span
+                ><span class="skill-tag">Monorepo</span
+                ><span class="skill-tag">Conventional</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ DESIGN / SOFT ═══ -->
+      <section class="skills-section" id="design">
+        <div class="skill-category">
+          <div class="cat-header">
+            <div class="cat-icon purple">◈</div>
+            <div class="cat-label">
+              Design & <span class="accent-p">Strategy</span>
+            </div>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-card c-purple">
+              <div class="skill-name">
+                <span class="dot purple"></span>Figma / Design Systems
+              </div>
+              <div class="skill-level">Advanced — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-purple" data-width="82"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Auto-Layout</span
+                ><span class="skill-tag">Tokens</span
+                ><span class="skill-tag">Components</span>
+              </div>
+            </div>
+            <div class="skill-card c-purple">
+              <div class="skill-name">
+                <span class="dot purple"></span>System Architecture
+              </div>
+              <div class="skill-level">Expert — 4 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-purple" data-width="90"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">DDD</span
+                ><span class="skill-tag">CQRS</span
+                ><span class="skill-tag">Event Sourcing</span>
+              </div>
+            </div>
+            <div class="skill-card c-purple">
+              <div class="skill-name">
+                <span class="dot purple"></span>Agile / Leadership
+              </div>
+              <div class="skill-level">Advanced — 3 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-purple" data-width="86"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Scrum</span
+                ><span class="skill-tag">Mentoring</span
+                ><span class="skill-tag">Code Review</span>
+              </div>
+            </div>
+            <div class="skill-card c-purple">
+              <div class="skill-name">
+                <span class="dot purple"></span>Performance Tuning
+              </div>
+              <div class="skill-level">Expert — 4 years</div>
+              <div class="skill-bar">
+                <div class="skill-bar-fill fill-purple" data-width="91"></div>
+              </div>
+              <div class="skill-tags">
+                <span class="skill-tag">Lighthouse</span
+                ><span class="skill-tag">Profiling</span
+                ><span class="skill-tag">Web Vitals</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ STATS ═══ -->
+      <section class="skills-section" id="stats">
+        <div class="stats-strip">
+          <div class="stat-item">
+            <div class="stat-num" data-count="22">0</div>
+            <div class="stat-label">Technologies</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-count="5">0</div>
+            <div class="stat-label">Years Active</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-count="30">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-count="3">0</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ CURRENTLY EXPLORING ═══ -->
+      <section id="exploring">
+        <h2 class="explore-heading">
+          Currently <span class="accent">Exploring</span>
+        </h2>
+        <p class="explore-desc">
+          Technology never stands still — and neither do I. Here's what I'm diving into right now.
+        </p>
+        <div class="explore-grid">
+
+          <div class="explore-item tilt-card" style="--item-glow: var(--magenta); --glow-rgb: 255,0,255;" data-interest="85">
+            <div class="explore-expand-toggle">▼</div>
+            <div class="explore-item-top">
+              <div class="explore-icon">🧠</div>
+              <div class="explore-item-info">
+                <div class="explore-item-name"><span class="explore-status-dot" style="background: var(--magenta);"></span> AI/ML Integration</div>
+                <div class="explore-item-sub">LLM APIs, RAG pipelines, vector databases</div>
+              </div>
+            </div>
+            <div class="explore-interest">
+              <span class="explore-interest-label">Interest</span>
+              <div class="explore-interest-bar"><div class="explore-interest-fill" style="background: linear-gradient(90deg, var(--magenta), rgba(255,0,255,0.4));"></div></div>
+            </div>
+            <div class="explore-details">
+              <div class="explore-details-inner">
+                <p class="explore-detail-text">Building intelligent features with OpenAI, Anthropic, and open-source models. Currently prototyping RAG systems with Pinecone and LangChain for context-aware applications.</p>
+                <div class="explore-tags">
+                  <span class="explore-tag">LangChain</span>
+                  <span class="explore-tag">Pinecone</span>
+                  <span class="explore-tag">OpenAI SDK</span>
+                  <span class="explore-tag">Hugging Face</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="explore-item tilt-card" style="--item-glow: var(--cyan); --glow-rgb: 0,240,255;" data-interest="72">
+            <div class="explore-expand-toggle">▼</div>
+            <div class="explore-item-top">
+              <div class="explore-icon">⚡</div>
+              <div class="explore-item-info">
+                <div class="explore-item-name"><span class="explore-status-dot" style="background: var(--cyan);"></span> WebGPU</div>
+                <div class="explore-item-sub">Next-gen GPU compute for the browser</div>
+              </div>
+            </div>
+            <div class="explore-interest">
+              <span class="explore-interest-label">Interest</span>
+              <div class="explore-interest-bar"><div class="explore-interest-fill" style="background: linear-gradient(90deg, var(--cyan), rgba(0,240,255,0.4));"></div></div>
+            </div>
+            <div class="explore-details">
+              <div class="explore-details-inner">
+                <p class="explore-detail-text">Experimenting with the WebGPU API for parallel compute shaders and real-time graphics. Testing compute pipelines for physics simulations and ML inference directly in the browser.</p>
+                <div class="explore-tags">
+                  <span class="explore-tag">WGSL</span>
+                  <span class="explore-tag">Compute Shaders</span>
+                  <span class="explore-tag">GPU Pipelines</span>
+                  <span class="explore-tag">Three.js WebGPU</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="explore-item tilt-card" style="--item-glow: var(--lime); --glow-rgb: 0,255,136;" data-interest="68">
+            <div class="explore-expand-toggle">▼</div>
+            <div class="explore-item-top">
+              <div class="explore-icon">🦀</div>
+              <div class="explore-item-info">
+                <div class="explore-item-name"><span class="explore-status-dot" style="background: var(--lime);"></span> Rust + WASM</div>
+                <div class="explore-item-sub">High-performance web modules via WebAssembly</div>
+              </div>
+            </div>
+            <div class="explore-interest">
+              <span class="explore-interest-label">Interest</span>
+              <div class="explore-interest-bar"><div class="explore-interest-fill" style="background: linear-gradient(90deg, var(--lime), rgba(0,255,136,0.4));"></div></div>
+            </div>
+            <div class="explore-details">
+              <div class="explore-details-inner">
+                <p class="explore-detail-text">Writing performance-critical modules in Rust and compiling to WASM for near-native speed in the browser. Exploring wasm-bindgen for seamless JS interop and wasm-pack for tooling.</p>
+                <div class="explore-tags">
+                  <span class="explore-tag">wasm-bindgen</span>
+                  <span class="explore-tag">wasm-pack</span>
+                  <span class="explore-tag">Cargo</span>
+                  <span class="explore-tag">wasm-opt</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="explore-item tilt-card" style="--item-glow: var(--purple); --glow-rgb: 168,85,247;" data-interest="90">
+            <div class="explore-expand-toggle">▼</div>
+            <div class="explore-item-top">
+              <div class="explore-icon">🌐</div>
+              <div class="explore-item-info">
+                <div class="explore-item-name"><span class="explore-status-dot" style="background: var(--purple);"></span> Edge Computing</div>
+                <div class="explore-item-sub">Cloudflare Workers, Deno Deploy, Fly.io</div>
+              </div>
+            </div>
+            <div class="explore-interest">
+              <span class="explore-interest-label">Interest</span>
+              <div class="explore-interest-bar"><div class="explore-interest-fill" style="background: linear-gradient(90deg, var(--purple), rgba(168,85,247,0.4));"></div></div>
+            </div>
+            <div class="explore-details">
+              <div class="explore-details-inner">
+                <p class="explore-detail-text">Deploying serverless functions at the edge for sub-50ms latency globally. Building with Cloudflare Workers KV, Durable Objects, and exploring Fly.io for stateful edge workloads.</p>
+                <div class="explore-tags">
+                  <span class="explore-tag">Workers KV</span>
+                  <span class="explore-tag">Durable Objects</span>
+                  <span class="explore-tag">Deno Deploy</span>
+                  <span class="explore-tag">Fly Machines</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ═══ NEXT CTA ═══ -->
+      <section class="next-cta">
+        <div class="next-cta-label">Next Dimension</div>
+        <h2 class="next-cta-heading">
+          <a href="projects.html" data-nav>See My Projects &rarr;</a>
+        </h2>
+      </section>
+
+      <div class="footer-bar">
+        <span>&copy; 2026 Alex Rivera. Built from scratch.</span>
+        <div class="footer-socials">
+          <a
+            href="https://github.com/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://linkedin.com/in/alexrivera"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+          <a href="mailto:alex@alexrivera.dev">Email</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import * as THREE from "three";
+      import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+      import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+      import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+      import { ShaderPass } from "three/addons/postprocessing/ShaderPass.js";
+
+      /* ═══════════════════════════════════════════════════════
+           3D SCENE: "The Neural Network"
+           — A living graph of interconnected skill nodes floating
+             in space. Nodes drift on sinusoidal paths, dynamically
+             linking when they're close. Pulsing energy flows
+             through connection lines. A helix of data particles
+             spirals through the center.
+        ═══════════════════════════════════════════════════════ */
+
+      const isMobile = window.innerWidth < 768;
+      const canvas = document.getElementById("webgl");
+      const renderer = new THREE.WebGLRenderer({
+        canvas,
+        antialias: !isMobile,
+        alpha: true,
+      });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      renderer.setClearColor(0x05060f, 1);
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 0.85;
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x05060f, 0.006);
+
+      const camera = new THREE.PerspectiveCamera(
+        50,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        500,
+      );
+      camera.position.set(0, 0, 60);
+
+      const clock = new THREE.Clock();
+      const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
+
+      /* ── LIGHTS ── */
+      scene.add(new THREE.AmbientLight(0x0a0a20, 0.5));
+      const pts = [
+        { c: 0x00f0ff, i: 2.5, p: [30, 15, 20] },
+        { c: 0xff00ff, i: 1.8, p: [-25, -12, 15] },
+        { c: 0x00ff88, i: 1.5, p: [0, 25, -20] },
+        { c: 0xa855f7, i: 1.2, p: [-20, 10, -25] },
+      ];
+      const lights = pts.map((l) => {
+        const pl = new THREE.PointLight(l.c, l.i, 90);
+        pl.position.set(...l.p);
+        scene.add(pl);
+        return pl;
+      });
+
+      /* ── NETWORK NODES ── */
+      const nodeCount = isMobile ? 25 : 55;
+      const nodes = [];
+      const nodeGroup = new THREE.Group();
+      scene.add(nodeGroup);
+
+      const palette = [
+        new THREE.Color(0x00f0ff),
+        new THREE.Color(0xff00ff),
+        new THREE.Color(0x00ff88),
+        new THREE.Color(0xa855f7),
+      ];
+
+      // Core geometry: icosahedron for nodes
+      const coreGeo = new THREE.IcosahedronGeometry(1, 1);
+
+      for (let i = 0; i < nodeCount; i++) {
+        const col = palette[i % 4];
+        const size = 0.15 + Math.random() * 0.3;
+        const isHub = i < 8; // first 8 are "hub" nodes — larger
+        const s = isHub ? size * 1.8 : size;
+
+        const mat = new THREE.MeshStandardMaterial({
+          color: col,
+          emissive: col,
+          emissiveIntensity: isHub ? 0.8 : 0.5,
+          metalness: 0.5,
+          roughness: 0.3,
+          wireframe: Math.random() > 0.5,
+        });
+        const mesh = new THREE.Mesh(coreGeo, mat);
+        mesh.scale.setScalar(s);
+
+        // Glow sprite
+        const spMat = new THREE.SpriteMaterial({
+          color: col,
+          transparent: true,
+          opacity: isHub ? 0.15 : 0.08,
+          blending: THREE.AdditiveBlending,
+        });
+        const sp = new THREE.Sprite(spMat);
+        sp.scale.setScalar(s * (isHub ? 7 : 5));
+        mesh.add(sp);
+
+        // Orbit data
+        const spread = isHub ? 12 : 30;
+        mesh.userData = {
+          ox: (Math.random() - 0.5) * spread,
+          oy: (Math.random() - 0.5) * spread * 0.7,
+          oz: (Math.random() - 0.5) * spread,
+          rx: (Math.random() - 0.5) * 0.6,
+          ry: (Math.random() - 0.5) * 0.6,
+          rz: (Math.random() - 0.5) * 0.6,
+          freq: 0.2 + Math.random() * 0.5,
+          amp: 2 + Math.random() * 6,
+          phase: Math.random() * Math.PI * 2,
+          isHub,
+        };
+        nodeGroup.add(mesh);
+        nodes.push(mesh);
+      }
+
+      /* ── CONNECTION LINES ── */
+      const maxConn = isMobile ? 40 : 80;
+      const connMat = new THREE.LineBasicMaterial({
+        transparent: true,
+        opacity: 0.06,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        vertexColors: true,
+      });
+      const connLines = [];
+      for (let i = 0; i < maxConn; i++) {
+        const geo = new THREE.BufferGeometry();
+        const pos = new Float32Array(6);
+        const col = new Float32Array(6);
+        geo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+        geo.setAttribute("color", new THREE.BufferAttribute(col, 3));
+        const line = new THREE.Line(geo, connMat.clone());
+        line.visible = false;
+        nodeGroup.add(line);
+        connLines.push(line);
+      }
+
+      /* ── DATA HELIX (spiral particles through the center) ── */
+      const helixCount = isMobile ? 200 : 500;
+      const hGeo = new THREE.BufferGeometry();
+      const hPos = new Float32Array(helixCount * 3);
+      const hSizes = new Float32Array(helixCount);
+      const hColors = new Float32Array(helixCount * 3);
+
+      for (let i = 0; i < helixCount; i++) {
+        const t = (i / helixCount) * Math.PI * 8;
+        const r = 4 + Math.sin(t * 0.5) * 2;
+        hPos[i * 3] = Math.cos(t) * r;
+        hPos[i * 3 + 1] = (i / helixCount - 0.5) * 50;
+        hPos[i * 3 + 2] = Math.sin(t) * r;
+        hSizes[i] = 0.5 + Math.random() * 1;
+        const c = palette[i % 4];
+        hColors[i * 3] = c.r;
+        hColors[i * 3 + 1] = c.g;
+        hColors[i * 3 + 2] = c.b;
+      }
+      hGeo.setAttribute("position", new THREE.BufferAttribute(hPos, 3));
+      hGeo.setAttribute("size", new THREE.BufferAttribute(hSizes, 1));
+      hGeo.setAttribute("color", new THREE.BufferAttribute(hColors, 3));
+
+      const helixMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uPR: { value: renderer.getPixelRatio() },
+        },
+        vertexShader: `
+                attribute float size; attribute vec3 color;
+                varying vec3 vC; varying float vA;
+                uniform float uTime, uPR;
+                void main(){
+                    vC = color;
+                    vec3 p = position;
+                    p.y = mod(p.y + uTime * 3.0, 50.0) - 25.0;
+                    p.x += sin(uTime * 0.3 + position.y * 0.1) * 0.5;
+                    p.z += cos(uTime * 0.3 + position.y * 0.1) * 0.5;
+                    vec4 mv = modelViewMatrix * vec4(p, 1.0);
+                    gl_PointSize = size * uPR * (30.0 / -mv.z);
+                    vA = smoothstep(25.0, 10.0, abs(p.y));
+                    gl_Position = projectionMatrix * mv;
+                }
+            `,
+        fragmentShader: `
+                varying vec3 vC; varying float vA;
+                void main(){
+                    float d = length(gl_PointCoord - 0.5);
+                    if(d > 0.5) discard;
+                    float a = smoothstep(0.5, 0.0, d) * 0.35 * vA;
+                    gl_FragColor = vec4(vC, a);
+                }
+            `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      });
+      scene.add(new THREE.Points(hGeo, helixMat));
+
+      /* ── BACKGROUND STARS ── */
+      const starCount = isMobile ? 300 : 900;
+      const stGeo = new THREE.BufferGeometry();
+      const stPos = new Float32Array(starCount * 3);
+      const stSizes = new Float32Array(starCount);
+      for (let i = 0; i < starCount; i++) {
+        const r = 40 + Math.random() * 120;
+        const th = Math.random() * Math.PI * 2;
+        const ph = Math.acos(2 * Math.random() - 1);
+        stPos[i * 3] = r * Math.sin(ph) * Math.cos(th);
+        stPos[i * 3 + 1] = r * Math.sin(ph) * Math.sin(th);
+        stPos[i * 3 + 2] = r * Math.cos(ph);
+        stSizes[i] = Math.random() * 0.8 + 0.1;
+      }
+      stGeo.setAttribute("position", new THREE.BufferAttribute(stPos, 3));
+      stGeo.setAttribute("size", new THREE.BufferAttribute(stSizes, 1));
+
+      const starMat = new THREE.ShaderMaterial({
+        uniforms: {
+          uTime: { value: 0 },
+          uPR: { value: renderer.getPixelRatio() },
+        },
+        vertexShader: `
+                attribute float size; uniform float uTime, uPR;
+                varying float vA;
+                void main(){
+                    vec3 p = position;
+                    p += sin(uTime * 0.02 + position.y * 0.01) * 0.3;
+                    vec4 mv = modelViewMatrix * vec4(p, 1.0);
+                    gl_PointSize = size * uPR * (35.0 / -mv.z);
+                    vA = sin(uTime * (0.5 + size) + position.x) * 0.3 + 0.7;
+                    gl_Position = projectionMatrix * mv;
+                }
+            `,
+        fragmentShader: `
+                varying float vA;
+                void main(){
+                    float d = length(gl_PointCoord - 0.5);
+                    if(d > 0.5) discard;
+                    gl_FragColor = vec4(0.5, 0.55, 0.7, smoothstep(0.5, 0.0, d) * 0.25 * vA);
+                }
+            `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+      });
+      scene.add(new THREE.Points(stGeo, starMat));
+
+      /* ── DECORATIVE RINGS ── */
+      const torusMat = (c) =>
+        new THREE.MeshBasicMaterial({
+          color: c,
+          transparent: true,
+          opacity: 0.06,
+          blending: THREE.AdditiveBlending,
+        });
+      const tGeo = new THREE.TorusGeometry(15, 0.03, 6, 120);
+      const ring1 = new THREE.Mesh(tGeo, torusMat(0x00f0ff));
+      ring1.rotation.x = Math.PI / 2;
+      scene.add(ring1);
+      const ring2 = new THREE.Mesh(tGeo.clone(), torusMat(0xff00ff));
+      ring2.rotation.x = Math.PI / 3;
+      ring2.rotation.z = 0.6;
+      scene.add(ring2);
+      const ring3 = new THREE.Mesh(
+        new THREE.TorusGeometry(22, 0.02, 6, 160),
+        torusMat(0x00ff88),
+      );
+      ring3.rotation.y = Math.PI / 4;
+      scene.add(ring3);
+
+      /* ── POST-PROCESSING ── */
+      const composer = new EffectComposer(renderer);
+      composer.addPass(new RenderPass(scene, camera));
+      if (!isMobile) {
+        composer.addPass(
+          new UnrealBloomPass(
+            new THREE.Vector2(window.innerWidth, window.innerHeight),
+            0.7,
+            0.4,
+            0.35,
+          ),
+        );
+      }
+      const compShader = {
+        uniforms: { tDiffuse: { value: null }, uTime: { value: 0 } },
+        vertexShader: `varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,
+        fragmentShader: `
+                uniform sampler2D tDiffuse; uniform float uTime; varying vec2 vUv;
+                void main(){
+                    vec2 uv=vUv; vec2 d=uv-0.5;
+                    float ca=length(d)*0.0012;
+                    float r=texture2D(tDiffuse,uv+d*ca).r;
+                    float g=texture2D(tDiffuse,uv).g;
+                    float b=texture2D(tDiffuse,uv-d*ca).b;
+                    float vig=1.0-dot(d,d)*0.9;
+                    vig=smoothstep(0.0,1.0,vig);
+                    gl_FragColor=vec4(vec3(r,g,b)*vig,1.0);
+                }
+            `,
+      };
+      composer.addPass(new ShaderPass(compShader));
+
+      /* ── ANIMATION LOOP ── */
+      const connectionDist = isMobile ? 14 : 18;
+
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = clock.getElapsedTime();
+
+        // Smooth mouse
+        mouse.x += (mouse.tx - mouse.x) * 0.03;
+        mouse.y += (mouse.ty - mouse.y) * 0.03;
+
+        // Camera: fixed, gentle tilt
+        camera.position.x += (mouse.x * 5 - camera.position.x) * 0.015;
+        camera.position.y += (mouse.y * 3 - camera.position.y) * 0.015;
+        camera.lookAt(0, 0, 0);
+
+        // Slow rotation of entire network
+        nodeGroup.rotation.y = t * 0.03 + mouse.x * 0.12;
+        nodeGroup.rotation.x = Math.sin(t * 0.012) * 0.06;
+
+        // Animate nodes
+        for (const n of nodes) {
+          const u = n.userData;
+          const f = t * u.freq + u.phase;
+          n.position.x = u.ox + Math.sin(f) * u.amp * 0.4;
+          n.position.y = u.oy + Math.cos(f * 0.7) * u.amp * 0.3;
+          n.position.z = u.oz + Math.sin(f * 0.5 + 1) * u.amp * 0.3;
+          n.rotation.x += u.rx * 0.01;
+          n.rotation.y += u.ry * 0.01;
+        }
+
+        // Dynamic connections
+        let ci = 0;
+        for (let i = 0; i < nodes.length && ci < maxConn; i++) {
+          for (let j = i + 1; j < nodes.length && ci < maxConn; j++) {
+            const dist = nodes[i].position.distanceTo(nodes[j].position);
+            if (dist < connectionDist) {
+              const line = connLines[ci];
+              const pa = line.geometry.attributes.position.array;
+              pa[0] = nodes[i].position.x;
+              pa[1] = nodes[i].position.y;
+              pa[2] = nodes[i].position.z;
+              pa[3] = nodes[j].position.x;
+              pa[4] = nodes[j].position.y;
+              pa[5] = nodes[j].position.z;
+              line.geometry.attributes.position.needsUpdate = true;
+
+              // Color from each node's emissive
+              const ca = line.geometry.attributes.color.array;
+              const c1 = nodes[i].material.emissive;
+              const c2 = nodes[j].material.emissive;
+              ca[0] = c1.r;
+              ca[1] = c1.g;
+              ca[2] = c1.b;
+              ca[3] = c2.r;
+              ca[4] = c2.g;
+              ca[5] = c2.b;
+              line.geometry.attributes.color.needsUpdate = true;
+
+              const strength = THREE.MathUtils.mapLinear(
+                dist,
+                3,
+                connectionDist,
+                0.12,
+                0.0,
+              );
+              // Pulse
+              const pulse = (Math.sin(t * 2 + i * 0.3) * 0.5 + 0.5) * 0.04;
+              line.material.opacity = strength + pulse;
+              line.visible = true;
+              ci++;
+            }
+          }
+        }
+        for (let k = ci; k < maxConn; k++) connLines[k].visible = false;
+
+        // Rings
+        ring1.rotation.z = t * 0.02;
+        ring2.rotation.z = -t * 0.018;
+        ring3.rotation.x += 0.0005;
+        ring3.rotation.z = t * 0.01;
+
+        // Lights orbit
+        lights[0].position.x = Math.cos(t * 0.1) * 30;
+        lights[0].position.z = Math.sin(t * 0.1) * 30;
+        lights[1].position.x = Math.cos(t * 0.07 + 2) * 25;
+        lights[1].position.z = Math.sin(t * 0.07 + 2) * 25;
+
+        // Uniforms
+        helixMat.uniforms.uTime.value = t;
+        starMat.uniforms.uTime.value = t;
+        composer.passes[composer.passes.length - 1].uniforms.uTime.value = t;
+        composer.render();
+      }
+
+      /* ── EVENTS ── */
+      window.addEventListener("mousemove", (e) => {
+        mouse.tx = (e.clientX / window.innerWidth) * 2 - 1;
+        mouse.ty = -(e.clientY / window.innerHeight) * 2 + 1;
+      });
+      window.addEventListener(
+        "touchmove",
+        (e) => {
+          if (e.touches.length) {
+            mouse.tx = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+            mouse.ty = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+          }
+        },
+        { passive: true },
+      );
+      window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        composer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      /* ── PRELOADER ── */
+      const bar = document.getElementById("loader-progress");
+      let prog = 0;
+      const iv = setInterval(() => {
+        prog += Math.random() * 18 + 5;
+        if (prog >= 100) {
+          prog = 100;
+          bar.style.width = "100%";
+          clearInterval(iv);
+          setTimeout(() => {
+            gsap.to("#preloader", {
+              opacity: 0,
+              duration: 0.7,
+              ease: "power2.inOut",
+              onComplete() {
+                document.getElementById("preloader").style.display = "none";
+                runIntro();
+              },
+            });
+          }, 300);
+        } else bar.style.width = prog + "%";
+      }, 80);
+
+      function runIntro() {
+        const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        tl.to(".skill-hero .line-inner", {
+          y: "0%",
+          duration: 1.2,
+          stagger: 0.15,
+        })
+          .to(".section-label", { opacity: 1, x: 0, duration: 0.8 }, "-=0.6")
+          .to(".hero-sub", { opacity: 1, y: 0, duration: 0.8 }, "-=0.4");
+      }
+
+      /* ── SCROLL ANIMATIONS ── */
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Fade hero on scroll
+      gsap.to(".skill-hero", {
+        scrollTrigger: {
+          trigger: ".skill-hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+        opacity: 0,
+        y: -60,
+      });
+
+      // Category headers
+      document.querySelectorAll(".cat-header").forEach((h, i) => {
+        gsap.to(h, {
+          scrollTrigger: {
+            trigger: h,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          x: 0,
+          duration: 0.8,
+          delay: i * 0.05,
+        });
+      });
+
+      // Skill cards with stagger
+      document.querySelectorAll(".skills-section").forEach((sec) => {
+        const cards = sec.querySelectorAll(".skill-card");
+        cards.forEach((card, i) => {
+          gsap.to(card, {
+            scrollTrigger: {
+              trigger: card,
+              start: "top 90%",
+              toggleActions: "play none none reverse",
+              onEnter: () => {
+                const fill = card.querySelector(".skill-bar-fill");
+                if (fill) {
+                  setTimeout(() => { fill.style.width = fill.dataset.width + "%"; }, 100 + i * 80);
+                }
+              },
+              onLeaveBack: () => {
+                const fill = card.querySelector(".skill-bar-fill");
+                if (fill) fill.style.width = "0%";
+              },
+              onEnterBack: () => {
+                const fill = card.querySelector(".skill-bar-fill");
+                if (fill) {
+                  setTimeout(() => { fill.style.width = fill.dataset.width + "%"; }, 100 + i * 80);
+                }
+              },
+            },
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            delay: i * 0.06,
+          });
+        });
+      });
+
+      // Stats counter
+      document.querySelectorAll(".stat-item").forEach((item, i) => {
+        gsap.to(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+            onEnter: () => {
+              const el = item.querySelector(".stat-num");
+              const target = parseInt(el.dataset.count);
+              gsap.fromTo({val:0},{val:0},{val:target,duration:2,ease:"power2.out",onUpdate(){el.textContent=Math.round(this.targets()[0].val)+"+"}});
+            },
+            onLeaveBack: () => {
+              const el = item.querySelector(".stat-num");
+              el.textContent = "0";
+            },
+            onEnterBack: () => {
+              const el = item.querySelector(".stat-num");
+              const target = parseInt(el.dataset.count);
+              gsap.fromTo({val:0},{val:0},{val:target,duration:2,ease:"power2.out",onUpdate(){el.textContent=Math.round(this.targets()[0].val)+"+"}});
+            },
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.7,
+          delay: i * 0.08,
+        });
+      });
+
+      // Currently Exploring section
+      gsap.to(".explore-heading", {
+        scrollTrigger: {
+          trigger: "#exploring",
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+      });
+      gsap.to(".explore-desc", {
+        scrollTrigger: {
+          trigger: "#exploring",
+          start: "top 75%",
+          toggleActions: "play none none reverse",
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        delay: 0.1,
+      });
+      document.querySelectorAll(".explore-item").forEach((item, i) => {
+        const fill = item.querySelector('.explore-interest-fill');
+        const interest = item.getAttribute('data-interest') || '70';
+        gsap.to(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 90%",
+            toggleActions: "play none none reverse",
+            onEnter: () => { if (fill) fill.style.width = interest + '%'; },
+            onLeaveBack: () => { if (fill) fill.style.width = '0%'; },
+          },
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          delay: i * 0.12,
+        });
+      });
+
+      /* ── EXPLORE CARD CLICK-TO-EXPAND ── */
+      document.querySelectorAll('.explore-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const wasExpanded = item.classList.contains('expanded');
+          // Close all others
+          document.querySelectorAll('.explore-item.expanded').forEach(other => {
+            if (other !== item) other.classList.remove('expanded');
+          });
+          item.classList.toggle('expanded', !wasExpanded);
+        });
+      });
+
+      animate();
+    </script>
+
+
+    <script src="js/shared.js"></script>
+    <script src="js/skills.js"></script>
+  </body>
+</html>
