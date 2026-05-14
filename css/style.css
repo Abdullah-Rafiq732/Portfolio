@@ -222,7 +222,7 @@
             font-family: var(--font-mono);
             font-size: 0.72rem;
             font-weight: 500;
-            letter-spacing: 2px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
             color: var(--gray);
             position: relative;
@@ -354,9 +354,10 @@
         .hero-name .line-inner {
             display: block;
             transform: translateY(110%);
+            color: var(--white);
         }
         .hero-name .line:nth-child(2) .line-inner {
-            background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--lime));
+            background: linear-gradient(90deg, var(--cyan), var(--magenta));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -416,6 +417,7 @@
         }
         .btn-primary:hover {
             color: var(--bg-deep);
+            box-shadow: 0 0 25px rgba(0, 245, 255, 0.45), 0 0 60px rgba(0, 245, 255, 0.15);
         }
 
         .btn-ghost {
@@ -467,6 +469,71 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             color: var(--gray);
+        }
+
+        /* ═══════════════════════════════════════════════════════ */
+        /*  HERO PSEUDO STARS                                     */
+        /* ═══════════════════════════════════════════════════════ */
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.55) 0%, transparent 100%),
+                radial-gradient(1px 1px at 30% 5%,  rgba(255,255,255,0.45) 0%, transparent 100%),
+                radial-gradient(1px 1px at 55% 22%, rgba(255,255,255,0.50) 0%, transparent 100%),
+                radial-gradient(1px 1px at 72% 8%,  rgba(0,245,255,0.40)   0%, transparent 100%),
+                radial-gradient(1px 1px at 88% 35%, rgba(255,255,255,0.40) 0%, transparent 100%),
+                radial-gradient(1px 1px at 20% 60%, rgba(255,255,255,0.35) 0%, transparent 100%),
+                radial-gradient(1px 1px at 42% 75%, rgba(0,245,255,0.30)   0%, transparent 100%),
+                radial-gradient(1px 1px at 65% 55%, rgba(255,255,255,0.45) 0%, transparent 100%),
+                radial-gradient(1px 1px at 82% 70%, rgba(255,255,255,0.35) 0%, transparent 100%),
+                radial-gradient(1px 1px at 5%  90%, rgba(255,255,255,0.40) 0%, transparent 100%);
+            background-size:
+                90px 80px, 120px 100px, 80px 90px, 110px 75px, 95px 85px,
+                85px 95px, 100px 110px, 75px 80px, 105px 90px, 80px 100px;
+            pointer-events: none;
+            z-index: 0;
+            animation: star-twinkle 8s ease-in-out infinite alternate;
+        }
+        @keyframes star-twinkle {
+            0%   { opacity: 0.55; }
+            100% { opacity: 1; }
+        }
+
+        /* ═══════════════════════════════════════════════════════ */
+        /*  PLANET CANVAS                                         */
+        /* ═══════════════════════════════════════════════════════ */
+        #planet-canvas {
+            position: absolute;
+            right: 6vw;
+            top: 50%;
+            transform: translateY(-50%);
+            width: min(44vw, 580px);
+            height: min(44vw, 580px);
+            pointer-events: none;
+            z-index: 2;
+            border-radius: 50%;
+        }
+        @media (max-width: 1024px) {
+            #planet-canvas {
+                width: min(38vw, 400px);
+                height: min(38vw, 400px);
+                right: 2vw;
+            }
+        }
+        @media (max-width: 768px) {
+            #planet-canvas {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: 72vw;
+                height: 72vw;
+                margin: 2rem auto 0;
+                opacity: 0.65;
+                display: block;
+            }
         }
 
         /* ═══════════════════════════════════════════════════════ */

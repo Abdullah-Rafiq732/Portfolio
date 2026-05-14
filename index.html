@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Rivera | Developer Nexus</title>
+    <title>Abdullah Rafiq | My Portfolio</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +73,7 @@
                 <div class="hero-scroll-line"></div>
                 <span class="hero-scroll-text">Scroll to explore</span>
             </div>
+            <canvas id="planet-canvas"></canvas>
         </section>
 
         <!-- MANIFESTO -->
@@ -490,154 +491,6 @@
         import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 
         /* ═══════════════════════════════════════════════════════
-           SHADER: Simplex Noise (Ashima Arts)
-        ═══════════════════════════════════════════════════════ */
-        const noiseGLSL = `
-            vec3 mod289(vec3 x){return x-floor(x*(1.0/289.0))*289.0;}
-            vec4 mod289(vec4 x){return x-floor(x*(1.0/289.0))*289.0;}
-            vec4 permute(vec4 x){return mod289(((x*34.0)+1.0)*x);}
-            vec4 taylorInvSqrt(vec4 r){return 1.79284291400159-0.85373472095314*r;}
-            float snoise(vec3 v){
-                const vec2 C=vec2(1.0/6.0,1.0/3.0);
-                const vec4 D=vec4(0.0,0.5,1.0,2.0);
-                vec3 i=floor(v+dot(v,C.yyy));
-                vec3 x0=v-i+dot(i,C.xxx);
-                vec3 g=step(x0.yzx,x0.xyz);
-                vec3 l=1.0-g;
-                vec3 i1=min(g.xyz,l.zxy);
-                vec3 i2=max(g.xyz,l.zxy);
-                vec3 x1=x0-i1+C.xxx;
-                vec3 x2=x0-i2+C.yyy;
-                vec3 x3=x0-D.yyy;
-                i=mod289(i);
-                vec4 p=permute(permute(permute(
-                    i.z+vec4(0.0,i1.z,i2.z,1.0))
-                    +i.y+vec4(0.0,i1.y,i2.y,1.0))
-                    +i.x+vec4(0.0,i1.x,i2.x,1.0));
-                float n_=0.142857142857;
-                vec3 ns=n_*D.wyz-D.xzx;
-                vec4 j=p-49.0*floor(p*ns.z*ns.z);
-                vec4 x_=floor(j*ns.z);
-                vec4 y_=floor(j-7.0*x_);
-                vec4 x=x_*ns.x+ns.yyyy;
-                vec4 y=y_*ns.x+ns.yyyy;
-                vec4 h=1.0-abs(x)-abs(y);
-                vec4 b0=vec4(x.xy,y.xy);
-                vec4 b1=vec4(x.zw,y.zw);
-                vec4 s0=floor(b0)*2.0+1.0;
-                vec4 s1=floor(b1)*2.0+1.0;
-                vec4 sh=-step(h,vec4(0.0));
-                vec4 a0=b0.xzyw+s0.xzyw*sh.xxyy;
-                vec4 a1=b1.xzyw+s1.xzyw*sh.zzww;
-                vec3 p0=vec3(a0.xy,h.x);
-                vec3 p1=vec3(a0.zw,h.y);
-                vec3 p2=vec3(a1.xy,h.z);
-                vec3 p3=vec3(a1.zw,h.w);
-                vec4 norm=taylorInvSqrt(vec4(dot(p0,p0),dot(p1,p1),dot(p2,p2),dot(p3,p3)));
-                p0*=norm.x;p1*=norm.y;p2*=norm.z;p3*=norm.w;
-                vec4 m=max(0.6-vec4(dot(x0,x0),dot(x1,x1),dot(x2,x2),dot(x3,x3)),0.0);
-                m=m*m;
-                return 42.0*dot(m*m,vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
-            }
-        `;
-
-        /* ═══════════════════════════════════════════════════════
-           SHADER: Central Crystal – Vertex
-        ═══════════════════════════════════════════════════════ */
-        const crystalVertexShader = `
-            ${noiseGLSL}
-            uniform float uTime;
-            uniform float uDistortion;
-            uniform vec2 uMouse;
-            varying vec3 vNormal;
-            varying vec3 vPosition;
-            varying float vDisplacement;
-            varying vec3 vWorldPosition;
-
-            void main() {
-                vec3 pos = position;
-                float noise1 = snoise(pos * 0.4 + uTime * 0.25) * uDistortion;
-                float noise2 = snoise(pos * 1.2 + uTime * 0.15) * uDistortion * 0.3;
-                float totalNoise = noise1 + noise2;
-                pos += normal * totalNoise;
-
-                // Mouse influence
-                vec3 mouseWorld = vec3(uMouse.x * 15.0, uMouse.y * 15.0, 0.0);
-                float mouseDist = distance(pos, mouseWorld);
-                float mouseInfluence = smoothstep(20.0, 0.0, mouseDist) * 2.0;
-                pos += normal * mouseInfluence * 0.5;
-
-                vDisplacement = totalNoise;
-                vNormal = normalize(normalMatrix * normal);
-                vPosition = (modelViewMatrix * vec4(pos, 1.0)).xyz;
-                vWorldPosition = (modelMatrix * vec4(pos, 1.0)).xyz;
-                gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-            }
-        `;
-
-        /* ═══════════════════════════════════════════════════════
-           SHADER: Central Crystal – Fragment
-        ═══════════════════════════════════════════════════════ */
-        const crystalFragmentShader = `
-            uniform float uTime;
-            uniform vec3 uColor1;
-            uniform vec3 uColor2;
-            varying vec3 vNormal;
-            varying vec3 vPosition;
-            varying float vDisplacement;
-            varying vec3 vWorldPosition;
-
-            void main() {
-                vec3 viewDir = normalize(-vPosition);
-                float fresnel = pow(1.0 - max(dot(viewDir, vNormal), 0.0), 3.0);
-
-                // Iridescent color shift
-                float angle = dot(viewDir, vNormal);
-                vec3 col1 = uColor1;
-                vec3 col2 = uColor2;
-                vec3 col3 = vec3(0.0, 1.0, 0.53); // lime
-
-                vec3 baseColor = mix(col1, col2, fresnel);
-                baseColor = mix(baseColor, col3, sin(vDisplacement * 3.0 + uTime) * 0.3 + 0.3);
-
-                // Edge glow
-                float edgeGlow = fresnel * 0.8;
-
-                // Inner light
-                float innerLight = smoothstep(-0.5, 1.5, vDisplacement) * 0.25;
-
-                vec3 finalColor = baseColor * (0.3 + edgeGlow + innerLight);
-                float alpha = 0.45 + fresnel * 0.2;
-
-                gl_FragColor = vec4(finalColor, alpha);
-            }
-        `;
-
-        /* ═══════════════════════════════════════════════════════
-           SHADER: Wireframe Overlay – Vertex
-        ═══════════════════════════════════════════════════════ */
-        const wireVertexShader = `
-            ${noiseGLSL}
-            uniform float uTime;
-            uniform float uDistortion;
-            void main() {
-                vec3 pos = position;
-                float n = snoise(pos * 0.4 + uTime * 0.25) * uDistortion;
-                pos += normal * n;
-                pos *= 1.02;
-                gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-            }
-        `;
-
-        const wireFragmentShader = `
-            uniform float uTime;
-            void main() {
-                float pulse = sin(uTime * 2.0) * 0.3 + 0.5;
-                gl_FragColor = vec4(0.0, 0.94, 1.0, pulse * 0.25);
-            }
-        `;
-
-        /* ═══════════════════════════════════════════════════════
            SHADER: Grid Floor
         ═══════════════════════════════════════════════════════ */
         const gridVertexShader = `
@@ -780,116 +633,6 @@
         scene.add(whiteLight);
 
         /* ═══════════════════════════════════════════════════════
-           CENTRAL CRYSTAL
-        ═══════════════════════════════════════════════════════ */
-        const crystalGeo = new THREE.IcosahedronGeometry(8, isMobile ? 3 : 5);
-        const crystalMat = new THREE.ShaderMaterial({
-            vertexShader: crystalVertexShader,
-            fragmentShader: crystalFragmentShader,
-            uniforms: {
-                uTime: { value: 0 },
-                uDistortion: { value: 2.5 },
-                uMouse: { value: new THREE.Vector2(0, 0) },
-                uColor1: { value: new THREE.Color(0x00f0ff) },
-                uColor2: { value: new THREE.Color(0xff00ff) }
-            },
-            transparent: true,
-            side: THREE.DoubleSide,
-            depthWrite: false
-        });
-        const crystal = new THREE.Mesh(crystalGeo, crystalMat);
-        crystal.position.set(12, 0, 0);
-        scene.add(crystal);
-
-        // Wireframe overlay
-        const wireGeo = new THREE.IcosahedronGeometry(8, isMobile ? 3 : 5);
-        const wireMat = new THREE.ShaderMaterial({
-            vertexShader: wireVertexShader,
-            fragmentShader: wireFragmentShader,
-            uniforms: {
-                uTime: { value: 0 },
-                uDistortion: { value: 2.5 }
-            },
-            transparent: true,
-            wireframe: true,
-            depthWrite: false
-        });
-        const wireframe = new THREE.Mesh(wireGeo, wireMat);
-        wireframe.position.copy(crystal.position);
-        scene.add(wireframe);
-
-        // Inner glow sphere
-        const innerGlowMat = new THREE.MeshBasicMaterial({
-            color: 0x00f0ff,
-            transparent: true,
-            opacity: 0.04
-        });
-        const innerGlow = new THREE.Mesh(new THREE.SphereGeometry(5, 16, 16), innerGlowMat);
-        innerGlow.position.copy(crystal.position);
-        scene.add(innerGlow);
-
-        /* ═══════════════════════════════════════════════════════
-           SATELLITE OBJECTS
-        ═══════════════════════════════════════════════════════ */
-        const satellites = [];
-        const satGeos = [
-            new THREE.OctahedronGeometry(1, 0),
-            new THREE.TetrahedronGeometry(1, 0),
-            new THREE.DodecahedronGeometry(0.8, 0),
-            new THREE.IcosahedronGeometry(0.7, 0),
-            new THREE.BoxGeometry(1, 1, 1),
-            new THREE.ConeGeometry(0.7, 1.4, 4),
-            new THREE.TorusGeometry(0.6, 0.25, 8, 6),
-            new THREE.OctahedronGeometry(0.5, 1)
-        ];
-
-        const satColors = [0x00f0ff, 0xff00ff, 0x00ff88, 0xa855f7, 0x00f0ff, 0xff00ff, 0x00ff88, 0xa855f7];
-
-        for (let i = 0; i < 8; i++) {
-            const geo = satGeos[i];
-            const mat = new THREE.MeshStandardMaterial({
-                color: satColors[i],
-                emissive: satColors[i],
-                emissiveIntensity: 0.4,
-                metalness: 0.9,
-                roughness: 0.15,
-                wireframe: i % 3 === 0
-            });
-            const mesh = new THREE.Mesh(geo, mat);
-
-            const orbitRadius = 14 + Math.random() * 10;
-            const orbitSpeed = 0.1 + Math.random() * 0.25;
-            const orbitTilt = (Math.random() - 0.5) * Math.PI * 0.6;
-            const orbitPhase = Math.random() * Math.PI * 2;
-            const yOffset = (Math.random() - 0.5) * 8;
-
-            mesh.userData = { orbitRadius, orbitSpeed, orbitTilt, orbitPhase, yOffset };
-            scene.add(mesh);
-            satellites.push(mesh);
-        }
-
-        /* ═══════════════════════════════════════════════════════
-           CONNECTIONS (lines between nearby objects)
-        ═══════════════════════════════════════════════════════ */
-        const connectionMat = new THREE.LineBasicMaterial({
-            color: 0x00f0ff,
-            transparent: true,
-            opacity: 0.08,
-            depthWrite: false
-        });
-        const maxConnections = 30;
-        const connectionLines = [];
-        for (let i = 0; i < maxConnections; i++) {
-            const geo = new THREE.BufferGeometry().setFromPoints([
-                new THREE.Vector3(), new THREE.Vector3()
-            ]);
-            const line = new THREE.Line(geo, connectionMat.clone());
-            line.visible = false;
-            scene.add(line);
-            connectionLines.push(line);
-        }
-
-        /* ═══════════════════════════════════════════════════════
            PARTICLE FIELD (Background Stars)
         ═══════════════════════════════════════════════════════ */
         const particleCount = isMobile ? 800 : 2500;
@@ -982,25 +725,6 @@
         scene.add(gridPlane);
 
         /* ═══════════════════════════════════════════════════════
-           FLOATING RINGS (decorative)
-        ═══════════════════════════════════════════════════════ */
-        const rings = [];
-        for (let i = 0; i < 3; i++) {
-            const ringGeo = new THREE.TorusGeometry(18 + i * 6, 0.05, 8, 80);
-            const ringMat = new THREE.MeshBasicMaterial({
-                color: i === 0 ? 0x00f0ff : i === 1 ? 0xff00ff : 0x00ff88,
-                transparent: true,
-                opacity: 0.12
-            });
-            const ring = new THREE.Mesh(ringGeo, ringMat);
-            ring.position.copy(crystal.position);
-            ring.rotation.x = Math.PI / 2 + i * 0.4;
-            ring.rotation.y = i * 0.6;
-            scene.add(ring);
-            rings.push(ring);
-        }
-
-        /* ═══════════════════════════════════════════════════════
            POST-PROCESSING
         ═══════════════════════════════════════════════════════ */
         const composer = new EffectComposer(renderer);
@@ -1024,7 +748,7 @@
         ═══════════════════════════════════════════════════════ */
         let scrollProgress = 0;
         const cameraPositions = {
-            start: { x: 0, y: 2, z: 35, lookX: 12, lookY: 0, lookZ: 0 },
+            start: { x: 0, y: 2, z: 35, lookX: 0, lookY: 0, lookZ: 0 },
             mid1: { x: -5, y: 8, z: 28, lookX: 0, lookY: 2, lookZ: -5 },
             mid2: { x: 5, y: 3, z: 22, lookX: 0, lookY: 0, lookZ: 0 },
             end: { x: 0, y: 15, z: 45, lookX: 0, lookY: 0, lookZ: 0 }
@@ -1088,65 +812,6 @@
             // Smooth mouse
             mouse.x += (mouse.targetX - mouse.x) * 0.05;
             mouse.y += (mouse.targetY - mouse.y) * 0.05;
-
-            // Update crystal
-            crystalMat.uniforms.uTime.value = elapsed;
-            crystalMat.uniforms.uMouse.value.set(mouse.x, mouse.y);
-
-            const breathe = Math.sin(elapsed * 0.5) * 0.3 + 1.0;
-            crystalMat.uniforms.uDistortion.value = 2.0 + breathe * 0.5;
-
-            crystal.rotation.y = elapsed * 0.08;
-            crystal.rotation.x = Math.sin(elapsed * 0.15) * 0.15;
-
-            // Wireframe
-            wireMat.uniforms.uTime.value = elapsed;
-            wireMat.uniforms.uDistortion.value = crystalMat.uniforms.uDistortion.value;
-            wireframe.rotation.copy(crystal.rotation);
-
-            // Inner glow pulse
-            innerGlow.scale.setScalar(0.95 + Math.sin(elapsed * 1.5) * 0.08);
-            innerGlowMat.opacity = 0.03 + Math.sin(elapsed * 2) * 0.02;
-
-            // Satellites orbit
-            satellites.forEach((sat, i) => {
-                const u = sat.userData;
-                const angle = elapsed * u.orbitSpeed + u.orbitPhase;
-                const cx = crystal.position.x;
-                sat.position.x = cx + Math.cos(angle) * u.orbitRadius;
-                sat.position.z = Math.sin(angle) * u.orbitRadius * Math.cos(u.orbitTilt);
-                sat.position.y = u.yOffset + Math.sin(angle) * u.orbitRadius * Math.sin(u.orbitTilt);
-                sat.rotation.x = elapsed * (0.3 + i * 0.1);
-                sat.rotation.y = elapsed * (0.2 + i * 0.15);
-            });
-
-            // Update connections
-            let connIdx = 0;
-            const allObjects = [crystal, ...satellites];
-            for (let i = 0; i < allObjects.length && connIdx < maxConnections; i++) {
-                for (let j = i + 1; j < allObjects.length && connIdx < maxConnections; j++) {
-                    const dist = allObjects[i].position.distanceTo(allObjects[j].position);
-                    if (dist < 25) {
-                        const line = connectionLines[connIdx];
-                        const positions = line.geometry.attributes.position;
-                        positions.setXYZ(0, allObjects[i].position.x, allObjects[i].position.y, allObjects[i].position.z);
-                        positions.setXYZ(1, allObjects[j].position.x, allObjects[j].position.y, allObjects[j].position.z);
-                        positions.needsUpdate = true;
-                        line.material.opacity = THREE.MathUtils.mapLinear(dist, 5, 25, 0.15, 0.0);
-                        line.visible = true;
-                        connIdx++;
-                    }
-                }
-            }
-            for (let k = connIdx; k < maxConnections; k++) {
-                connectionLines[k].visible = false;
-            }
-
-            // Rings rotate
-            rings.forEach((ring, i) => {
-                ring.rotation.z = elapsed * (0.05 + i * 0.02);
-                ring.rotation.x = Math.PI / 2 + i * 0.4 + Math.sin(elapsed * 0.2) * 0.1;
-            });
 
             // Lights orbit
             cyanLight.position.x = Math.cos(elapsed * 0.3) * 25;
@@ -1476,5 +1141,167 @@
 
     <script src="js/shared.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- ═══════ PLANET (Earth — self-contained) ═══════ -->
+    <script type="module">
+        import * as THREE from 'three';
+
+        function initPlanet() {
+            const canvas = document.getElementById('planet-canvas');
+            if (!canvas) return;
+
+            function getSize() {
+                const r = canvas.getBoundingClientRect();
+                return { w: r.width || 500, h: r.height || 500 };
+            }
+
+            const { w, h } = getSize();
+            const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+            renderer.setSize(w, h, false);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.setClearColor(0x000000, 0);
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 1000);
+            camera.position.set(0, 0, 3.2);
+
+            /* ── Lighting ── */
+            scene.add(new THREE.AmbientLight(0x111122, 0.6));
+            const sun = new THREE.DirectionalLight(0xffffff, 2.2);
+            sun.position.set(5, 3, 5);
+            scene.add(sun);
+            // Rim light from behind (night-side glow)
+            const rimLight = new THREE.PointLight(0x0033ff, 0.4, 20);
+            rimLight.position.set(-4, -1, -3);
+            scene.add(rimLight);
+
+            /* ── Starfield (1500+ dots) ── */
+            const starCount = 1600;
+            const starGeo = new THREE.BufferGeometry();
+            const starPos = new Float32Array(starCount * 3);
+            const starColors = new Float32Array(starCount * 3);
+            for (let i = 0; i < starCount; i++) {
+                const i3 = i * 3;
+                const r = 20 + Math.random() * 80;
+                const theta = Math.random() * Math.PI * 2;
+                const phi = Math.acos(2 * Math.random() - 1);
+                starPos[i3]     = r * Math.sin(phi) * Math.cos(theta);
+                starPos[i3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+                starPos[i3 + 2] = r * Math.cos(phi);
+                // Mostly white, some cyan-tinted
+                const tint = Math.random();
+                starColors[i3]     = tint < 0.15 ? 0.6 : 1.0;
+                starColors[i3 + 1] = tint < 0.15 ? 0.9 : 1.0;
+                starColors[i3 + 2] = 1.0;
+            }
+            starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+            starGeo.setAttribute('color',    new THREE.BufferAttribute(starColors, 3));
+            const starMat = new THREE.PointsMaterial({
+                size: 0.08,
+                sizeAttenuation: true,
+                transparent: true,
+                opacity: 0.85,
+                vertexColors: true,
+                depthWrite: false
+            });
+            scene.add(new THREE.Points(starGeo, starMat));
+
+            /* ── Earth sphere ── */
+            const earthGeo = new THREE.SphereGeometry(1, 64, 64);
+            const earthMat = new THREE.MeshPhongMaterial({
+                color: 0x2255aa,
+                emissive: 0x001122,
+                specular: 0x224466,
+                shininess: 30
+            });
+            const earth = new THREE.Mesh(earthGeo, earthMat);
+            scene.add(earth);
+
+            const loader = new THREE.TextureLoader();
+            loader.load(
+                'https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg',
+                (tex) => {
+                    tex.colorSpace = THREE.SRGBColorSpace;
+                    earthMat.map = tex;
+                    earthMat.color.setHex(0xffffff);
+                    earthMat.needsUpdate = true;
+                }
+            );
+
+            /* ── Cloud layer ── */
+            const cloudGeo = new THREE.SphereGeometry(1.018, 64, 64);
+            const cloudMat = new THREE.MeshPhongMaterial({
+                color: 0xffffff,
+                transparent: true,
+                opacity: 0.22,
+                depthWrite: false
+            });
+            loader.load(
+                'https://threejs.org/examples/textures/planets/earth_clouds_1024.png',
+                (tex) => { cloudMat.alphaMap = tex; cloudMat.needsUpdate = true; }
+            );
+            const clouds = new THREE.Mesh(cloudGeo, cloudMat);
+            scene.add(clouds);
+
+            /* ── Atmosphere inner glow ── */
+            const atmGeo = new THREE.SphereGeometry(1.06, 64, 64);
+            const atmMat = new THREE.MeshBasicMaterial({
+                color: 0x0088ff,
+                transparent: true,
+                opacity: 0.07,
+                side: THREE.BackSide,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
+            scene.add(new THREE.Mesh(atmGeo, atmMat));
+
+            /* ── Atmosphere fresnel glow ── */
+            const glowGeo = new THREE.SphereGeometry(1.12, 64, 64);
+            const glowMat = new THREE.ShaderMaterial({
+                uniforms: {},
+                vertexShader: `
+                    varying vec3 vNormal;
+                    void main() {
+                        vNormal = normalize(normalMatrix * normal);
+                        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                    }
+                `,
+                fragmentShader: `
+                    varying vec3 vNormal;
+                    void main() {
+                        float intensity = pow(0.58 - dot(vNormal, vec3(0.0, 0.0, 1.0)), 3.5);
+                        intensity = clamp(intensity, 0.0, 1.0);
+                        gl_FragColor = vec4(0.0, 0.72, 1.0, 1.0) * intensity * 0.9;
+                    }
+                `,
+                side: THREE.FrontSide,
+                blending: THREE.AdditiveBlending,
+                transparent: true,
+                depthWrite: false
+            });
+            scene.add(new THREE.Mesh(glowGeo, glowMat));
+
+            /* ── Animation loop ── */
+            function animate() {
+                requestAnimationFrame(animate);
+                earth.rotation.y  += 0.001;
+                clouds.rotation.y += 0.0013;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            /* ── Resize ── */
+            window.addEventListener('resize', () => {
+                const { w: rw, h: rh } = getSize();
+                if (rw === 0 || rh === 0) return;
+                renderer.setSize(rw, rh, false);
+                camera.aspect = rw / rh;
+                camera.updateProjectionMatrix();
+            });
+        }
+
+        // Wait for layout to settle so getBoundingClientRect is accurate
+        window.addEventListener('load', initPlanet);
+    </script>
 </body>
 </html>
